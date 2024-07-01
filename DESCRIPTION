@@ -5,7 +5,7 @@ Version: 1.0.0
 Date: 2024-06-04
 Author: c(person("John R", "Giles", role=c("aut", "cre"), email="john.giles@gatesfoundation.org"))
 Maintainer: John R Giles <john.giles@gatesfoundation.org>
-Description: Data and tools for analyzing Wastewater and Environmental Sampling (WES) data.
+Description: Methods for analyzing Wastewater and Environmental Sampling (WES) data.
 URL: https://gilesjohnr.github.io/WES/
 License: CC BY 4.0
 Roxygen: list(markdown = TRUE)
