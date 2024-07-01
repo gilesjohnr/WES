@@ -1,0 +1,46 @@
+Package: WES
+Type: Package
+Title: Tools for analyzing environmental sampling data
+Version: 1.0.0
+Date: 2024-06-04
+Author: c(person("John R", "Giles", role=c("aut", "cre"), email="john.giles@gatesfoundation.org"))
+Maintainer: John R Giles <john.giles@gatesfoundation.org>
+Description: Data and tools for analyzing Wastewater and Environmental Sampling (WES) data.
+URL: https://gilesjohnr.github.io/WES/
+License: CC BY 4.0
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
+Encoding: UTF-8
+LazyData: true
+Imports:
+  glue,
+  foreach,
+  data.table,
+  dplyr,
+  HDInterval,
+  zoo,
+  openmeteo,
+  chirps,
+  whitebox,
+  exactextractr,
+  elevatr,
+  raster,
+  sp,
+  sf,
+  rworldmap,
+  stars,
+  RCurl,
+  XML,
+  httr,
+  jsonlite
+Depends: 
+  R (>= 3.5.0),
+  stats, 
+  graphics,
+  grDevices,
+  utils
+Suggests: 
+  knitr, 
+  rmarkdown,
+  rworldxtra
+VignetteBuilder: knitr
