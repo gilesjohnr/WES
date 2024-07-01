@@ -1,2 +1,15 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^_pkgdown\.yml$
+^docs$
+^local$
+^pkgdown$
+^\.github$
+^LICENSE\.md$
+^data-raw$
+^doc$
+^docs$
+^man\figures$
+^tmp$
+^Meta$
+^es_output.*$
