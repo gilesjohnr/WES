@@ -65,7 +65,7 @@ We are currently developing an RShiny application that will visualize the data a
 
 ## Installation
 
-Use the `devtools` package to install the development version of `WES` from the GitHub repository. R version >= 3.5.0 recommended.
+Use the `devtools` package to install the development version of `WES` from the GitHub repository. R version >= 4.1.1 recommended.
 ```r
 install.packages("whitebox", dependencies=TRUE)
 whitebox::install_whitebox()

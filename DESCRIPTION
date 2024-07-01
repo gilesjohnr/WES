@@ -34,7 +34,7 @@ Imports:
   httr,
   jsonlite
 Depends: 
-  R (>= 3.5.0),
+  R (>= 4.1.1),
   stats, 
   graphics,
   grDevices,
