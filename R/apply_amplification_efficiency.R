@@ -6,7 +6,8 @@
 #' @param standard_curves A data.frame giving the target name, serial diluted concentration of target nucleic acid,
 #' and Ct value from a standard curve assay. Must follow the `template_WES_standard_curve` standardized format.
 #'
-#' @return A data.frame containing the mean, and low and high of the 95% confidence interval of the percentile amplification efficiency for each target name.
+#' @return A data.frame containing the mean, and low and high of the 95% confidence interval of the percentile
+#' amplification efficiency for each target name.
 #'
 #' @examples
 #' \dontrun{
