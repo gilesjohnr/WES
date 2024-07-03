@@ -1,5 +1,5 @@
 
-# WES v1.0.0
+# `WES` v1.0.0 released July 03, 2024 (migrated from `es` package)
 
 Welcome to the first release of the `WES` R package! Version 1.0.0 contains a collection of basic features that aim to make analyzing environmental sampling data easier and more reproducible. The functionality we have included to kick off the package includes:
 
