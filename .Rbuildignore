@@ -11,5 +11,6 @@
 ^docs$
 ^man\figures$
 ^tmp$
+^quarto$
 ^Meta$
 ^es_output.*$

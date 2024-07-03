@@ -11,7 +11,8 @@ apply_amplification_efficiency(standard_curves)
 and Ct value from a standard curve assay. Must follow the \code{template_WES_standard_curve} standardized format.}
 }
 \value{
-A data.frame containing the mean, and low and high of the 95\% confidence interval of the percentile amplification efficiency for each target name.
+A data.frame containing the mean, and low and high of the 95\% confidence interval of the percentile
+amplification efficiency for each target name.
 }
 \description{
 This function applies the \code{est_amplification_efficiency()} function to a data.frame object which follows the

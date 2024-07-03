@@ -35,7 +35,7 @@ Where $S_{ij}$ is the serially diluted concentration of the target nucleic acid 
 The following code will estimate $\phi$ and its 95% confidence intervals for a single target using `est_amplification_efficiency()`:
 
 ```{r, eval=FALSE}
-sel <- template_WES_standard_curve$target_name == 'target_1'
+sel <- template_WES_standard_curve$target_name == 'target_3'
 tmp_n_copies <- template_WES_standard_curve$n_copies[sel]
 tmp_ct_value <- template_WES_standard_curve$ct_value[sel]
 
@@ -43,13 +43,13 @@ est_amplification_efficiency(n_copies = tmp_n_copies,
                              ct_value = tmp_ct_value)
 
 $mean
-[1] 0.956834
+[1] 0.9718572
 
 $ci_lo
-[1] 1.409495
+[1] 1.221067
 
 $ci_hi
-[1] 0.5041726
+[1] 0.7226478
 ```
 
 And `apply_amplification_efficiency()` will apply the same function to all gene targets within a data frame following the format of the `template_WES_standard_curve` data object:
@@ -57,11 +57,11 @@ And `apply_amplification_efficiency()` will apply the same function to all gene 
 ```{r, eval=FALSE}
 apply_amplification_efficiency(template_WES_standard_curve)
 
-  target_name     mean    ci_lo     ci_hi
-1    target_0 1.098055 1.461838 0.7342719
-2    target_1 0.956834 1.409495 0.5041726
-3    target_2 1.280836 1.886246 0.6754255
-4    target_3 1.099861 1.562983 0.6367384
+  target_name      mean    ci_lo     ci_hi
+1    target_0 1.0728651 1.376872 0.7688578
+2    target_1 1.0604787 1.187228 0.9337295
+3    target_2 1.1259549 1.407022 0.8448880
+4    target_3 0.9718572 1.221067 0.7226478
 ```
 
 ## References

@@ -2,11 +2,11 @@ Package: WES
 Type: Package
 Title: Tools for analyzing environmental sampling data
 Version: 1.0.0
-Date: 2024-06-04
+Date: 2024-07-03
 Author: c(person("John R", "Giles", role=c("aut", "cre"), email="john.giles@gatesfoundation.org"))
 Maintainer: John R Giles <john.giles@gatesfoundation.org>
 Description: Methods for analyzing Wastewater and Environmental Sampling (WES) data.
-URL: https://gilesjohnr.github.io/WES/
+URL: https://www.r-wes.com/
 License: CC BY 4.0
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.1
