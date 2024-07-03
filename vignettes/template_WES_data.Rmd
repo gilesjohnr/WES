@@ -96,7 +96,7 @@ ggplot(template_WES_data, aes(x=sample_date, y=ct_value, color=target_name)) +
           title = "Template of simulated environmental sampling data")
 ```
 
-<center>![](../man/figures/plot_template_WES_data.png){width="100%"}</center>
+<center>![](../figures/plot_template_WES_data.png){width="100%"}</center>
 
 \
 
@@ -164,4 +164,4 @@ ggplot(template_WES_standard_curve, aes(x=ct_value, y=log(n_copies), color=targe
           title = "Template standard curve data for each target")
 ```
 
-<center>![](../man/figures/plot_template_WES_standard_curve.png){width="70%"}</center>
+<center>![](../figures/plot_template_WES_standard_curve.png){width="70%"}</center>

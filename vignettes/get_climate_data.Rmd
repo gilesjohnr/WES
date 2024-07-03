@@ -77,7 +77,7 @@ ggplot2::ggplot(precip, aes(x = date)) +
            legend.title = element_blank())
 ```
 
-![](../man/figures/plot_climate_precip.png){width=100%}
+![](../figures/plot_climate_precip.png){width=100%}
 
 \
 
@@ -111,7 +111,7 @@ ggplot2::ggplot(temp, aes(x = date)) +
            legend.title = element_blank())
 ```
 
-![](../man/figures/plot_climate_temp.png){width=100%}
+![](../figures/plot_climate_temp.png){width=100%}
 
 \
 
@@ -144,7 +144,7 @@ ggplot2::ggplot(esi, aes(x = date)) +
            legend.title = element_blank())
 ```
 
-![](../man/figures/plot_climate_esi.png){width=100%}
+![](../figures/plot_climate_esi.png){width=100%}
 
 \
 
@@ -174,7 +174,7 @@ ggplot2::ggplot(river, aes(x = date)) +
            legend.title = element_blank())
 ```
 
-![](../man/figures/plot_climate_river.png){width=100%}
+![](../figures/plot_climate_river.png){width=100%}
 
 \
 
@@ -234,4 +234,4 @@ for (i in 1:length(climate_data)) {
 }
 ```
 
-![](../man/figures/dir_output_climate.png){width=100%}
+![](../figures/dir_output_climate.png){width=100%}

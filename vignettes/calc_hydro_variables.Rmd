@@ -64,7 +64,7 @@ download_elevation_data(lon = df$lon,
 
 The Digital Elevation Model (DEM) is downloaded to the 'tmp' directory.
 
-![](../man/figures/dir_download_dem.png){width=70%}
+![](../figures/dir_download_dem.png){width=70%}
 
 \
 
@@ -101,7 +101,7 @@ lon  lat       date location_id target_name ct_value elevation slope aspect  twi
 
 The intermediate spatial data produced in the calculation of topographical and hydrological variables are also saved to the 'tmp' output directory.
 
-![](../man/figures/dir_output_hydro.png){width=70%}
+![](../figures/dir_output_hydro.png){width=70%}
 
 \
 
@@ -212,4 +212,4 @@ gridExtra::grid.arrange(plot_dem, plot_slope, plot_aspect,
                         ncol=3)
 ```
 
-![](../man/figures/map_output_hydro.png){width=160%}
+![](../figures/map_output_hydro.png){width=160%}
