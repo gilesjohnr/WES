@@ -11,3 +11,4 @@ data-raw/compiled.csv
 /tmp/
 /local/
 es_output.*$
+docs

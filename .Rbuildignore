@@ -16,3 +16,6 @@ quarto
 ^LICENSE\.md$
 ^README\.md$
 ^es_output.*$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
