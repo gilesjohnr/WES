@@ -2,11 +2,12 @@
 .Rhistory
 .RData
 .Ruserdata
-docs
-local
 .DS_Store
 data-raw/3 std card BG-SP_08-01-23.csv
 data-raw/compiled.csv
 /doc/
+/docs/
 /Meta/
+/tmp/
+/local/
 es_output.*$
