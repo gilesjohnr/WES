@@ -65,7 +65,7 @@ Data saved here: <working directory>/tmp/BGD_admin_levels_simplified.shp
 
 Administrative units from geoBoundaries are downloaded to the 'tmp' directory. Individual GeoJSON files for each administrative level are downloaded first, and then a composite ESRI Shapefile is saved to the output directory.
 
-![](../figures/dir_admin_units.png){width=90%}
+![](../man/figures/dir_admin_units.png){width=90%}
 
 ```{r, eval=FALSE}
 # Relate downloaded administrative data to sampling sites
@@ -139,4 +139,4 @@ plot_grid(
 )
 ```
 
-<center>![](../figures/plot_admin_units.png){width="100%"}</center>
+<center>![](../man/figures/plot_admin_units.png){width="100%"}</center>

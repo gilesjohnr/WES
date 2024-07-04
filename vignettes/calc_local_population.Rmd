@@ -73,7 +73,7 @@ WES::download_elevation_data(
 
 Population and Digital Elevation Model (DEM) are downloaded to the 'tmp' directory.
 
-![](../figures/dir_download.png){width=70%}
+![](../man/figures/dir_download.png){width=70%}
 
 \
 
@@ -128,7 +128,7 @@ head(result)
 
 The intermediate spatial data produced in the delineation of drainage catchments and calculation of population size are also saved to the 'tmp' output directory.
 
-![](../figures/dir_output.png){width=70%}
+![](../man/figures/dir_output.png){width=70%}
 
 \
 
@@ -224,4 +224,4 @@ plot_radius_pop <-
 gridExtra::grid.arrange(plot_catchment, plot_catchment_pop, plot_radius_pop, ncol=3)
 ```
 
-![](../figures/map_output.png){width=160%}
+![](../man/figures/map_output.png){width=160%}

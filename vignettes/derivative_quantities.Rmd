@@ -37,7 +37,7 @@ Calculating the number of target gene copies in a sample is a form of absolute q
 
 Assuming the PCR machine's amplification efficiency is 100%, the number of gene copies is expected to double with each cycle [@ruijter2009] resulting in a logarithmic relationship between Ct values and gene copies, where the number of target gene copies decreases exponentially as the number of PCR cycles increases linearly.
 
-<center>![](../figures/plot_ct_n_copies.png){width="95%"}</center>
+<center>![](../man/figures/plot_ct_n_copies.png){width="95%"}</center>
 
 Due to the logarithmic relationship of PCR kinetics, we use a log-linear model to relate known gene target quantities from the standard curve to the Ct values observed in the qPCR performed on our study samples:
 
@@ -45,7 +45,7 @@ $$
 \log(\text{number gene copies}_i) \sim \alpha + \beta_i \cdot \text{Ct value}_i + \epsilon.
 $$
 
-<center>![](../figures/plot_n_copies.png){width="65%"}</center>
+<center>![](../man/figures/plot_n_copies.png){width="65%"}</center>
 
 The code below shows how to use the `calc_n_copies()` function on the `template_WES_data` and `template_WES_standard_curve` objects to calculate the number of target gene copies.
 
@@ -90,7 +90,7 @@ date location_id  lat   lon target_name ct_value n_copies
 
 Note the prediction for the number of target gene copies shown below is convenient in that it is more interpretable than the Ct value method, however, it is an absolute quantification method that may need further normalization to adjust for environmental confounders. An alternative is to use a relative quantification method such as $\Delta \Delta \text{Ct}$ described in the following section.
 
-<center>![](../figures/plot_predicted_n_copies.png){width="70%"}</center>
+<center>![](../man/figures/plot_predicted_n_copies.png){width="70%"}</center>
 
 \
 
@@ -320,7 +320,7 @@ plot_grid(p1, p2, nrow=2, align='v', rel_heights = c(1.1,1))
 
 ```
 
-<center>![](../figures/plot_ddct.png){width="100%"}</center>
+<center>![](../man/figures/plot_ddct.png){width="100%"}</center>
 
 \
 
