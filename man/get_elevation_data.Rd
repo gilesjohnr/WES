@@ -18,7 +18,7 @@ data.frame
 This function takes information of where and when a set of environmental samples were
 collected and retrieves the elevation (in meters) for those locations at an approximate 100m spatial resolution.
 Data come from the \href{https://www.usgs.gov/centers/eros/science/usgs-eros-archive-digital-elevation-shuttle-radar-topography-mission-srtm-1}{SRTM}
-DEM which are accessed through the Amazon Web Services (AWS) API and the \href{https://cran.r-project.org/web/packages/elevatr/index.html}{\code{elevatr}}
+DEM which are accessed through the Amazon Web Services (AWS) API and the \href{https://CRAN.R-project.org/package=elevatr}{\code{elevatr}}
 R package.
 }
 \examples{

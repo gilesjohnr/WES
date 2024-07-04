@@ -25,7 +25,7 @@ data.frame
 This function takes information of where and when a set of environmental samples were
 collected and retrieves temperature data (measured in accumulated degree-days) for those locations and times. Data come from
 the Open-Meteo Historical Weather API (\url{https://open-meteo.com/en/docs/historical-weather-api})
-via the \href{https://cran.r-project.org/web/packages/openmeteo/index.html}{\code{openmeteo}} R package. The optional \code{intervals} argument
+via the \href{https://CRAN.R-project.org/package=openmeteo}{\code{openmeteo}} R package. The optional \code{intervals} argument
 specifies a set of intervals over which the function will calculate the accumulated temperature in the form of Accumulated Thermal Units (ATUs) for each interval.
 }
 \examples{

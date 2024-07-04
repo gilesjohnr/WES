@@ -3,7 +3,7 @@
 #' This function takes information of where and when a set of environmental samples were
 #' collected and retrieves precipitation data (in millimeters) for those locations and times. Data come from
 #' the Open-Meteo Historical Weather API ([https://open-meteo.com/en/docs/historical-weather-api](https://open-meteo.com/en/docs/historical-weather-api))
-#' via the [`openmeteo`](https://cran.r-project.org/web/packages/openmeteo/index.html) R package.
+#' via the [`openmeteo`](https://CRAN.R-project.org/package=openmeteo) R package.
 #' Additionally, the optional `intervals` argument specifies a set of intervals over which the function
 #' will calculate the cumulative sum of precipitation in millimeters (mm) for the previous X number of
 #' days for each location.

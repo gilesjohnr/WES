@@ -1,6 +1,6 @@
 Package: WES
 Type: Package
-Title: Tools for analyzing environmental sampling data
+Title: Tools for Analyzing Environmental Sampling Data
 Version: 1.0.0
 Date: 2024-07-03
 Authors@R: person("John R", "Giles", email = "john.giles@gatesfoundation.org", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-0954-4093"))

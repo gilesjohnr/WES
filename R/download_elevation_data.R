@@ -3,7 +3,7 @@
 #' This function takes the coordinates of sampling sites (longitude and latitude) and downloads a Digital Elevation Model (DEM)
 #' for the surrounding area. The DEM has an approximate spatial resolution of 100 meters. These data are derived from the
 #' Shuttle Radar Topography Mission (SRTM) DEM, which is accessible through the Amazon Web Services (AWS) API and the
-#' [`elevatr`](https://cran.r-project.org/web/packages/elevatr/index.html) R package.
+#' [`elevatr`](https://CRAN.R-project.org/package=elevatr) R package.
 #'
 #' @param lat A numeric vector giving the latitude of the sampling sites in Decimal Degrees.
 #' @param lon A numeric vector giving the longitude of the sampling sites in Decimal Degrees.Can accept a vector of multiple ISO codes.

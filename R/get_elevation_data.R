@@ -3,7 +3,7 @@
 #' This function takes information of where and when a set of environmental samples were
 #' collected and retrieves the elevation (in meters) for those locations at an approximate 100m spatial resolution.
 #' Data come from the [SRTM](https://www.usgs.gov/centers/eros/science/usgs-eros-archive-digital-elevation-shuttle-radar-topography-mission-srtm-1)
-#' DEM which are accessed through the Amazon Web Services (AWS) API and the [`elevatr`](https://cran.r-project.org/web/packages/elevatr/index.html)
+#' DEM which are accessed through the Amazon Web Services (AWS) API and the [`elevatr`](https://CRAN.R-project.org/package=elevatr)
 #' R package.
 #'
 #' @param lat A numeric vector giving the latitude of the sampling sites in Decimal Degrees.

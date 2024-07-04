@@ -20,7 +20,7 @@ Character string giving path to downloaded data.
 This function takes the coordinates of sampling sites (longitude and latitude) and downloads a Digital Elevation Model (DEM)
 for the surrounding area. The DEM has an approximate spatial resolution of 100 meters. These data are derived from the
 Shuttle Radar Topography Mission (SRTM) DEM, which is accessible through the Amazon Web Services (AWS) API and the
-\href{https://cran.r-project.org/web/packages/elevatr/index.html}{\code{elevatr}} R package.
+\href{https://CRAN.R-project.org/package=elevatr}{\code{elevatr}} R package.
 }
 \examples{
 \dontrun{

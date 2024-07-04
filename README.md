@@ -2,7 +2,7 @@
 [![R-CMD-check](https://github.com/gilesjohnr/WES/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/gilesjohnr/WES/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-# **WES**: an R package for analyzing environmental sampling data <img src="man/figures/logo.png" align="right" height="138" alt="" />
+# **WES**: an R package for Analyzing Environmental Sampling Data <img src="man/figures/logo.png" align="right" height="150" alt="" />
 
 The `WES` R package provides reproducible functions for collating and analyzing data from environmental sampling studies. Environmental Sampling (ES) of infectious diseases involves collecting samples from various sources (such as sewage, water, air, soil, or surfaces) to monitor the presence of pathogens in the environment. The tools here are intended to do the heavy lifting when analyzing ES data and include:
 

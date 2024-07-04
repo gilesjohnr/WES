@@ -21,7 +21,7 @@ data.frame
 This function takes information of where and when a set of environmental samples were
 collected and retrieves daily river discharge data from the nearest river (\eqn{m^3/s}) for those locations and times. Data come from
 the Open-Meteo Global Flood API (\url{https://open-meteo.com/en/docs/flood-api})
-via the \href{https://cran.r-project.org/web/packages/openmeteo/index.html}{\code{openmeteo}} R package.
+via the \href{https://CRAN.R-project.org/package=openmeteo}{\code{openmeteo}} R package.
 }
 \examples{
 \dontrun{

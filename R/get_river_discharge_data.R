@@ -3,7 +3,7 @@
 #' This function takes information of where and when a set of environmental samples were
 #' collected and retrieves daily river discharge data from the nearest river (\eqn{m^3/s}) for those locations and times. Data come from
 #' the Open-Meteo Global Flood API ([https://open-meteo.com/en/docs/flood-api](https://open-meteo.com/en/docs/flood-api))
-#' via the [`openmeteo`](https://cran.r-project.org/web/packages/openmeteo/index.html) R package.
+#' via the [`openmeteo`](https://CRAN.R-project.org/package=openmeteo) R package.
 #'
 #' @param lat A numeric vector giving the latitude of the sampling sites in Decimal Degrees.
 #' @param lon A numeric vector giving the longitude of the sampling sites in Decimal Degrees.

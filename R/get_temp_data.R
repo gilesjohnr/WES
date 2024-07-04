@@ -3,7 +3,7 @@
 #' This function takes information of where and when a set of environmental samples were
 #' collected and retrieves temperature data (measured in accumulated degree-days) for those locations and times. Data come from
 #' the Open-Meteo Historical Weather API ([https://open-meteo.com/en/docs/historical-weather-api](https://open-meteo.com/en/docs/historical-weather-api))
-#' via the [`openmeteo`](https://cran.r-project.org/web/packages/openmeteo/index.html) R package. The optional `intervals` argument
+#' via the [`openmeteo`](https://CRAN.R-project.org/package=openmeteo) R package. The optional `intervals` argument
 #' specifies a set of intervals over which the function will calculate the accumulated temperature in the form of Accumulated Thermal Units (ATUs) for each interval.
 #'
 #' @param lat A numeric vector giving the latitude of the sampling sites in Decimal Degrees.

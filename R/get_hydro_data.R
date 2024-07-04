@@ -5,7 +5,7 @@
 #' location. The variables include: elevation, slope, aspect, Topographical Wetness Index (TWI),
 #' flow accumulation, total flow accumulation within 500m, and distance to the nearest stream.
 #' If a DEM is not provided, then a DEM is acquired via [`elevatr::get_elev_raster`](https://www.rdocumentation.org/packages/elevatr/versions/0.99.0/topics/get_elev_raster)
-#' and the suite of variables are calculated using functions from the ['WhiteboxTools'](https://cran.r-project.org/web/packages/whitebox/index.html)
+#' and the suite of variables are calculated using functions from the ['WhiteboxTools'](https://CRAN.R-project.org/package=whitebox)
 #' R frontend.
 #'
 #' @param lat A numeric vector giving the latitude of the sampling sites in Decimal Degrees.

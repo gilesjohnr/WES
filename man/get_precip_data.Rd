@@ -25,7 +25,7 @@ data.frame
 This function takes information of where and when a set of environmental samples were
 collected and retrieves precipitation data (in millimeters) for those locations and times. Data come from
 the Open-Meteo Historical Weather API (\url{https://open-meteo.com/en/docs/historical-weather-api})
-via the \href{https://cran.r-project.org/web/packages/openmeteo/index.html}{\code{openmeteo}} R package.
+via the \href{https://CRAN.R-project.org/package=openmeteo}{\code{openmeteo}} R package.
 Additionally, the optional \code{intervals} argument specifies a set of intervals over which the function
 will calculate the cumulative sum of precipitation in millimeters (mm) for the previous X number of
 days for each location.

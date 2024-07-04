@@ -25,7 +25,7 @@ collected and retrieves a suite of topographical and hydrological variables for 
 location. The variables include: elevation, slope, aspect, Topographical Wetness Index (TWI),
 flow accumulation, total flow accumulation within 500m, and distance to the nearest stream.
 If a DEM is not provided, then a DEM is acquired via \href{https://www.rdocumentation.org/packages/elevatr/versions/0.99.0/topics/get_elev_raster}{\code{elevatr::get_elev_raster}}
-and the suite of variables are calculated using functions from the \href{https://cran.r-project.org/web/packages/whitebox/index.html}{'WhiteboxTools'}
+and the suite of variables are calculated using functions from the \href{https://CRAN.R-project.org/package=whitebox}{'WhiteboxTools'}
 R frontend.
 }
 \examples{
