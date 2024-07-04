@@ -3,8 +3,7 @@ Type: Package
 Title: Tools for analyzing environmental sampling data
 Version: 1.0.0
 Date: 2024-07-03
-Author: c(person("John R", "Giles", role=c("aut", "cre"), email="john.giles@gatesfoundation.org"))
-Maintainer: John R Giles <john.giles@gatesfoundation.org>
+Authors@R: person("John R", "Giles", email = "john.giles@gatesfoundation.org", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-0954-4093"))
 Description: Methods for analyzing Wastewater and Environmental Sampling (WES) data.
 URL: https://www.r-wes.com/
 License: CC BY 4.0
@@ -40,7 +39,5 @@ Depends:
   grDevices,
   utils
 Suggests: 
-  knitr, 
   rmarkdown,
   rworldxtra
-VignetteBuilder: knitr
