@@ -33,7 +33,6 @@ by applying the \code{calc_delta_delta_ct} function. The data.frame must have th
 must be provided. The result is a data.frame containing a 'delta_delta_ct' column which can be merge into the source data.frame.
 }
 \examples{
-\dontrun{
 
 pae <- apply_amplification_efficiency(template_WES_standard_curve)
 
@@ -46,7 +45,5 @@ ddct_adjusted <- apply_delta_delta_ct(df = template_WES_data,
                                       reference_names = rep('target_0', 3),
                                       pae_names = pae$target_name,
                                       pae_values = pae$mean)
-
-}
 
 }

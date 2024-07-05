@@ -9,12 +9,8 @@
 #' @return A data.frame containing the mean, and low and high of the 95% confidence interval of the percentile
 #' amplification efficiency for each target name.
 #'
-#' @examples
-#' \dontrun{
+#' @examples apply_amplification_efficiency(template_WES_standard_curve)
 #'
-#' apply_amplification_efficiency(template_WES_standard_curve)
-#'
-#' }
 
 apply_amplification_efficiency <- function(standard_curves) {
 

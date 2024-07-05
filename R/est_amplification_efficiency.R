@@ -11,7 +11,6 @@
 #' @return List containing the mean, and low and high of the 95% confidence interval for the percentile amplification efficiency.
 #'
 #' @examples
-#' \dontrun{
 #'
 #' sel <- template_WES_standard_curve$target_name == 'target_1'
 #' tmp_n_copies <- template_WES_standard_curve$n_copies[sel]
@@ -20,7 +19,7 @@
 #' est_amplification_efficiency(n_copies = tmp_n_copies,
 #'                              ct_value = tmp_ct_value)
 #'
-#' }
+
 
 
 est_amplification_efficiency <- function(n_copies, ct_value) {

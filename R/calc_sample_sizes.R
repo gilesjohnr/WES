@@ -8,12 +8,7 @@
 #'
 #' @returns data.frame
 #'
-#' @examples
-#' \dontrun{
-#'
-#' calc_sample_sizes(template_WES_data)
-#'
-#' }
+#' @examples calc_sample_sizes(template_WES_data)
 
 calc_sample_sizes <- function(df, cutoff=40) {
 

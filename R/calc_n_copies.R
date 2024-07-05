@@ -13,7 +13,6 @@
 #' @returns Vector
 #'
 #' @examples
-#' \dontrun{
 #'
 #' df <- template_WES_data
 #'
@@ -23,7 +22,6 @@
 #'
 #' df$n_copies <- test
 #'
-#' }
 
 calc_n_copies <- function(ct_values,
                           target_names,

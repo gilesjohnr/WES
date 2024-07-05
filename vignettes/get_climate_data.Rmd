@@ -222,13 +222,10 @@ head(result)
 
 ### Save downloaded climate data
 ```{r eval=FALSE}
-out_path <- file.path(getwd(), 'tmp')
-dir.create(out_path)
-
 for (i in 1:length(climate_data)) {
 
      write.csv(get(x = climate_data[i]),
-               file = file.path(out_path, paste0('climate_data_', climate_data[i], '.csv')),
+               file = file.path(tempdir(), paste0('climate_data_', climate_data[i], '.csv')),
                row.names = FALSE)
 
 }

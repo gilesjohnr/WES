@@ -17,14 +17,16 @@
 #' @returns data.frame
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #'
-#' dir.create(file.path(getwd(), 'tmp'))
+#' download_elevation_data(lon = template_WES_data$lon,
+#'                         lat = template_WES_data$lat,
+#'                         path_output = tempdir())
 #'
 #' get_hydro_data(lon = template_WES_data$lon,
 #'                lat = template_WES_data$lat,
-#'                path_dem_raster = file.path(getwd(), 'tmp/dem.tif'),
-#'                path_output = file.path(getwd(), 'tmp'))
+#'                path_dem_raster = file.path(tempdir(), 'dem.tif'),
+#'                path_output = tempdir())
 #'
 #' }
 

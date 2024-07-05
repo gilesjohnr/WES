@@ -31,7 +31,7 @@ will calculate the cumulative sum of precipitation in millimeters (mm) for the p
 days for each location.
 }
 \examples{
-\dontrun{
+\donttest{
 
 d <- get_precip_data(lon = c(-56.0281, -54.9857),
                      lat = c(-2.9094, -2.8756),
@@ -39,17 +39,6 @@ d <- get_precip_data(lon = c(-56.0281, -54.9857),
                      intervals = c(1,3,7))
 
 head(d)
-
-ggplot2::ggplot(d, aes(x = date)) +
-     geom_line(aes(y = precip_daily_sum_7, col='Cumulative sum 7 days')) +
-     geom_line(aes(y = precip_daily_sum_3, col='Cumulative sum 3 days')) +
-     geom_line(aes(y = precip_daily_sum_1, col='Cumulative sum 1 day')) +
-     geom_line(aes(y = precip_daily_sum)) +
-     facet_grid(rows=vars(id)) +
-     labs(x="", y = "Precipitation (mm)") +
-     theme_bw() +
-     theme(legend.position = 'bottom',
-           legend.title = element_blank())
 
 }
 }

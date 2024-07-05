@@ -19,10 +19,6 @@ Environmental Sampling (ES) studies are conducted in a variety of settings, rang
 See below for an example of how to use the `WES` package to download geographic boundaries and identify the administrative units for a set of sampling sites.
 
 ``` {r, eval=FALSE}
-# Create an output directory
-path <- file.path(getwd(), 'tmp')
-dir.create(path)
-
 # Get ISO3 code for sample data
 template_iso <- coords_to_iso3(lon=template_WES_data$lon,
                                lat=template_WES_data$lat)
@@ -30,7 +26,7 @@ template_iso <- coords_to_iso3(lon=template_WES_data$lon,
 # Download administrative unit data from geoBoundaries
 download_admin_data(iso3 = template_iso$admin_0_iso[1], 
                     release='gbOpen', 
-                    path_output = path, 
+                    path_output = tempdir(), 
                     keep_geojson = TRUE,
                     simplified = TRUE)
 
@@ -60,10 +56,10 @@ Content type 'application/octet-stream' length 57643 bytes (56 KB)
 downloaded 56 KB
 
 Done.
-Data saved here: <working directory>/tmp/BGD_admin_levels_simplified.shp
+Data saved here: <temp directory>/BGD_admin_levels_simplified.shp
 ```
 
-Administrative units from geoBoundaries are downloaded to the 'tmp' directory. Individual GeoJSON files for each administrative level are downloaded first, and then a composite ESRI Shapefile is saved to the output directory.
+Administrative units from geoBoundaries are downloaded to the temp directory. Individual GeoJSON files for each administrative level are downloaded first, and then a composite ESRI Shapefile is saved to the output directory.
 
 ![](../man/figures/dir_admin_units.png){width=90%}
 
@@ -71,7 +67,8 @@ Administrative units from geoBoundaries are downloaded to the 'tmp' directory. I
 # Relate downloaded administrative data to sampling sites
 get_admin_data(lon = template_WES_data$lon,
                lat = template_WES_data$lat,
-               path_admin_data = file.path(path, 'BGD_admin_levels_simplified.shp'))
+               path_admin_data = file.path(tempdir(), 'BGD_admin_levels_simplified.shp'))
+
 Loading admin data...
 Extracting admin info at point locations...
 Done.
@@ -93,7 +90,7 @@ library(dplyr)
 library(ggplot2)
 library(cowplot)
 
-shapefile_path <- "<working directory>/tmp/BGD_admin_levels_simplified.shp"
+shapefile_path <- "<temp directory>/BGD_admin_levels_simplified.shp"
 shapefile <- st_read(shapefile_path)
 
 coordinates <- data.frame(x = template_WES_data$lon, y = template_WES_data$lat)

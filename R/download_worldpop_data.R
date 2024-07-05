@@ -18,13 +18,14 @@
 #' @returns Character string giving path to downloaded data.
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #'
-#' download_worldpop_data(iso3='TWN',
-#'                        year=2020,
-#'                        constrained=FALSE,
-#'                        UN_adjusted=FALSE,
-#'                        path_output=getwd())
+#' # Download population data for Taiwan
+#' download_worldpop_data(iso3 = 'TWN',
+#'                        year = 2020,
+#'                        constrained = FALSE,
+#'                        UN_adjusted = FALSE,
+#'                        path_output = tempdir())
 #'
 #' }
 

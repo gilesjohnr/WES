@@ -100,11 +100,13 @@ amplification efficiency for each target name.</p>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">apply_amplification_efficiency</span><span class="op">(</span><span class="va">template_WES_standard_curve</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   target_name      mean    ci_lo     ci_hi</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1    target_0 1.0728605 1.376861 0.7688600</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2    target_1 1.0970743 1.347295 0.8468532</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3    target_2 1.1258847 1.406146 0.8456235</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4    target_3 0.9726151 1.222018 0.7232123</span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="fu">apply_amplification_efficiency</span><span class="op">(</span><span class="va">template_WES_standard_curve</span><span class="op">)</span></span></span>
-<span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

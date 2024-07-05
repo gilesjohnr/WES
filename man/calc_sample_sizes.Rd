@@ -19,9 +19,5 @@ This function takes a compiled data.frame following the format shown in the \cod
 and calculates basic sample sizes and detection rates for all gene targets.
 }
 \examples{
-\dontrun{
-
 calc_sample_sizes(template_WES_data)
-
-}
 }

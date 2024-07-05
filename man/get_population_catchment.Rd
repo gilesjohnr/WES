@@ -42,25 +42,23 @@ Note that the delineation of catchments along streams (or sewer networks) still 
 from the provided DEM. Intermediate spatial variables are written to the directory specified in \code{path_output}.
 }
 \examples{
-\dontrun{
-
-dir.create(file.path(getwd(), 'tmp'))
+\donttest{
 
 download_worldpop_data(iso3 = 'BGD',
                        year = 2020,
                        constrained = FALSE,
                        UN_adjusted = FALSE,
-                       path_output = file.path(getwd(), 'tmp'))
+                       path_output = tempdir())
 
 download_elevation_data(lon = template_WES_data$lon,
                         lat = template_WES_data$lat,
-                        path_output = file.path(getwd(), 'tmp'))
+                        path_output = tempdir())
 
 get_population_catchment(lon = template_WES_data$lon,
                          lat = template_WES_data$lat,
-                         path_pop_raster = file.path(getwd(), 'tmp/bgd_ppp_2020.tif'),
-                         path_dem_raster = file.path(getwd(), 'tmp/dem.tif'),
-                         path_output = file.path(getwd(), 'tmp'))
+                         path_pop_raster = file.path(tempdir(), 'bgd_ppp_2020.tif'),
+                         path_dem_raster = file.path(tempdir(), 'dem.tif'),
+                         path_output = tempdir())
 
 }
 }

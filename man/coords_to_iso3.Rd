@@ -20,10 +20,8 @@ units that each point lies within. The administrative units are given in the ISO
 standard (\url{https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3}).
 }
 \examples{
-\dontrun{
 
 coords_to_iso3(lon = template_WES_data$lon,
                lat = template_WES_data$lat)
 
-}
 }

@@ -17,7 +17,6 @@
 #' @returns Scalar
 #'
 #' @examples
-#' \dontrun{
 #'
 #' # Traditional method
 #' calc_delta_delta_ct(ct_target_treatment = 32.5,
@@ -35,7 +34,6 @@
 #'                     pae_reference_treatment=0.98,
 #'                     pae_reference_control=0.99)
 #'
-#' }
 
 calc_delta_delta_ct <- function(ct_target_treatment,
                                 ct_target_control,

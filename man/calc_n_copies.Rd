@@ -24,7 +24,6 @@ the estimated number of gene target copies (e.g. viral load for a viral pathogen
 to the standard curve data and then using that model to find a point estimate for the provided Ct values.
 }
 \examples{
-\dontrun{
 
 df <- template_WES_data
 
@@ -34,5 +33,4 @@ test <- calc_n_copies(ct_values = df$ct_value,
 
 df$n_copies <- test
 
-}
 }

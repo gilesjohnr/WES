@@ -11,13 +11,13 @@
 #' @returns data.frame
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #'
-#' download_admin_data(iso3 = "BGD", path_output = getwd())
+#' download_admin_data(iso3 = "BGD", path_output = tempdir())
 #'
 #' get_admin_data(lon = template_WES_data$lon,
 #'                lat = template_WES_data$lat,
-#'                path_admin_data = file.path(getwd(), 'BGD_admin_levels.shp'))
+#'                path_admin_data = file.path(tempdir(), 'BGD_admin_levels.shp'))
 #'
 #' }
 

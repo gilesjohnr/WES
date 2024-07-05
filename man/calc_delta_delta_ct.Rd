@@ -42,7 +42,6 @@ Adjusted delta delta Ct values following \href{https://bmcbioinformatics.biomedc
 can be calculated by providing estimated values for the percentile amplification efficiency in \verb{pae_*} arguments.
 }
 \examples{
-\dontrun{
 
 # Traditional method
 calc_delta_delta_ct(ct_target_treatment = 32.5,
@@ -60,5 +59,4 @@ calc_delta_delta_ct(ct_target_treatment = 32.5,
                     pae_reference_treatment=0.98,
                     pae_reference_control=0.99)
 
-}
 }

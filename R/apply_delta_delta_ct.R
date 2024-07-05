@@ -14,7 +14,6 @@
 #' @returns data.frame
 #'
 #' @examples
-#' \dontrun{
 #'
 #' pae <- apply_amplification_efficiency(template_WES_standard_curve)
 #'
@@ -27,8 +26,6 @@
 #'                                       reference_names = rep('target_0', 3),
 #'                                       pae_names = pae$target_name,
 #'                                       pae_values = pae$mean)
-#'
-#' }
 #'
 
 apply_delta_delta_ct <- function(df,

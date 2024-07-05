@@ -53,16 +53,13 @@ date location_id  lat   lon target_name ct_value
 5 2020-03-07           1 23.8 90.37    target_1 31.60111
 6 2020-03-07           1 23.8 90.37    target_1 32.20208
 
-# Create a directory to download spatial data and save intermediate output
-dir.create(file.path(getwd(), 'tmp'))
-
 # Download a DEM for the area surrounding sampling sites
 download_elevation_data(lon = df$lon,
                         lat = df$lat,
-                        path_output = file.path(getwd(), 'tmp'))
+                        path_output = tempdir())
 ```
 
-The Digital Elevation Model (DEM) is downloaded to the 'tmp' directory.
+The Digital Elevation Model (DEM) is downloaded to the temp directory.
 
 ![](../man/figures/dir_download_dem.png){width=70%}
 
@@ -74,8 +71,8 @@ The Digital Elevation Model (DEM) is downloaded to the 'tmp' directory.
 hydro <- WES::get_hydro_data(
      lon = template_WES_data$lon,
      lat = template_WES_data$lat,
-     path_dem_raster = file.path(getwd(), 'tmp/dem.tif'),
-     path_output = file.path(getwd(), 'tmp')
+     path_dem_raster = file.path(tempdir(), 'dem.tif'),
+     path_output = tempdir()
 )
 
 hydro
@@ -99,7 +96,7 @@ lon  lat       date location_id target_name ct_value elevation slope aspect  twi
 
 ```
 
-The intermediate spatial data produced in the calculation of topographical and hydrological variables are also saved to the 'tmp' output directory.
+The intermediate spatial data produced in the calculation of topographical and hydrological variables are also saved to the temp output directory.
 
 ![](../man/figures/dir_output_hydro.png){width=70%}
 
@@ -109,14 +106,13 @@ The intermediate spatial data produced in the calculation of topographical and h
 These output data can be used for further analysis and visualization. Below is an example plot of the local population calculations shown above.
 
 ```{r, eval=FALSE}
-out_path <- file.path(getwd(), 'tmp')
-rast_dem <- raster::raster(file.path(out_path, 'dem.tif'))
-rast_slp <- raster::raster(file.path(out_path, 'slope.tif'))
-rast_asp <- raster::raster(file.path(out_path, 'aspect.tif'))
-rast_twi <- raster::raster(file.path(out_path, 'twi.tif'))
-rast_acc <- raster::raster(file.path(out_path, 'flow_acc.tif'))
-rast_hill <- raster::raster(file.path(out_path, 'hillshade.tif'))
-shp_streams <- sf::st_read(file.path(out_path, 'streams.shp'), quiet=TRUE)
+rast_dem <- raster::raster(file.path(tempdir(), 'dem.tif'))
+rast_slp <- raster::raster(file.path(tempdir(), 'slope.tif'))
+rast_asp <- raster::raster(file.path(tempdir(), 'aspect.tif'))
+rast_twi <- raster::raster(file.path(tempdir(), 'twi.tif'))
+rast_acc <- raster::raster(file.path(tempdir(), 'flow_acc.tif'))
+rast_hill <- raster::raster(file.path(tempdir(), 'hillshade.tif'))
+shp_streams <- sf::st_read(file.path(tempdir(), 'streams.shp'), quiet=TRUE)
 
 pts <- sp::SpatialPoints(data.frame(x=hydro$lon, y=hydro$lat), proj4string=CRS("+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"))
 pts_buff_500 <- raster::buffer(pts, 500)

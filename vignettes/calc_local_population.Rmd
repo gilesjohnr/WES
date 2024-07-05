@@ -51,27 +51,24 @@ date location_id  lat   lon target_name ct_value
 5 2020-03-07           1 23.8 90.37    target_1 31.60111
 6 2020-03-07           1 23.8 90.37    target_1 32.20208
 
-# Create a directory to download spatial data and save intermediate output
-dir.create(file.path(getwd(), 'tmp'))
-
 # Download population raster data from Worldpop
 WES::download_worldpop_data(
      iso3 = 'BGD',
      year = 2020,
      constrained = FALSE,
      UN_adjusted = FALSE,
-     path_output = file.path(getwd(), 'tmp')
+     path_output = tempdir()
 )
 
 # Download a DEM for the area surrounding sampling sites
 WES::download_elevation_data(
      lon = df$lon,
      lat = df$lat,
-     path_output = file.path(getwd(), 'tmp')
+     path_output = tempdir()
 )
 ```
 
-Population and Digital Elevation Model (DEM) are downloaded to the 'tmp' directory.
+Population and Digital Elevation Model (DEM) are downloaded to the temp directory.
 
 ![](../man/figures/dir_download.png){width=70%}
 
@@ -83,10 +80,10 @@ Population and Digital Elevation Model (DEM) are downloaded to the 'tmp' directo
 pop_catchment <- WES::get_population_catchment(
      lon = df$lon,
      lat = df$lat,
-     path_pop_raster = file.path(getwd(), 'tmp/bgd_ppp_2020.tif'),
-     path_dem_raster = file.path(getwd(), 'tmp/dem.tif'),
+     path_pop_raster = file.path(tempdir(), 'bgd_ppp_2020.tif'),
+     path_dem_raster = file.path(tempdir(), 'dem.tif'),
      path_stream_shp = NULL,
-     path_output = file.path(getwd(), 'tmp')
+     path_output = tempdir()
 )
 
 pop_catchment
@@ -100,8 +97,8 @@ pop_radius <- WES::get_population_radius(
      lon = df$lon,
      lat = df$lat,
      radius = 300,
-     path_pop_raster = file.path(getwd(), 'tmp/bgd_ppp_2020.tif'),
-     path_output = file.path(getwd(), 'tmp')
+     path_pop_raster = file.path(tempdir(), 'bgd_ppp_2020.tif'),
+     path_output = tempdir()
 )
 
 pop_radius
@@ -126,7 +123,7 @@ head(result)
 
 ```
 
-The intermediate spatial data produced in the delineation of drainage catchments and calculation of population size are also saved to the 'tmp' output directory.
+The intermediate spatial data produced in the delineation of drainage catchments and calculation of population size are also saved to the temp output directory.
 
 ![](../man/figures/dir_output.png){width=70%}
 
@@ -138,12 +135,12 @@ These output data can be used for further analysis and visualization. Below is a
 ```r{eval=FALSE}
 pts <- sp::SpatialPoints(data.frame(x=pop_catchment$lon, y=pop_catchment$lat), proj4string=sp::CRS("+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"))
 
-rast_dem <- raster::raster(file.path(getwd(), 'tmp/dem.tif'))
-rast_pop <- raster::raster(file.path(getwd(), 'tmp/bgd_ppp_2020_crop.tif'))
+rast_dem <- raster::raster(file.path(tempdir(), 'dem.tif'))
+rast_pop <- raster::raster(file.path(tempdir(), 'bgd_ppp_2020_crop.tif'))
 
-shp_streams <- sf::st_read(file.path(getwd(), 'tmp/streams.shp'), quiet=TRUE, crs = "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs")
-shp_catchments <- sf::st_read(file.path(getwd(), 'tmp/catchments.shp'), quiet=TRUE)
-shp_radius <- sf::st_read(file.path(getwd(), 'tmp/points_buffer_300.shp'), quiet=TRUE)
+shp_streams <- sf::st_read(file.path(tempdir(), 'streams.shp'), quiet=TRUE, crs = "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs")
+shp_catchments <- sf::st_read(file.path(tempdir(), 'catchments.shp'), quiet=TRUE)
+shp_radius <- sf::st_read(file.path(tempdir(), 'points_buffer_300.shp'), quiet=TRUE)
 
 
 tmp <- raster::as.data.frame(rast_dem, xy=TRUE)

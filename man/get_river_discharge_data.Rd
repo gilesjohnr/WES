@@ -24,21 +24,13 @@ the Open-Meteo Global Flood API (\url{https://open-meteo.com/en/docs/flood-api})
 via the \href{https://CRAN.R-project.org/package=openmeteo}{\code{openmeteo}} R package.
 }
 \examples{
-\dontrun{
+\donttest{
 
 d <- get_river_discharge_data(lon = c(-54.9857, -52.9857),
                               lat = c(-10.9094, -25.8756),
                               dates = c("2020-06-01", "2020-10-31"))
 
 head(d)
-
-ggplot2::ggplot(d, aes(x = date)) +
-     geom_line(aes(y = daily_river_discharge)) +
-     facet_grid(rows=vars(id)) +
-     labs(x="", y = "Local River Discharge (m^3/s)") +
-     theme_bw() +
-     theme(legend.position = 'bottom',
-           legend.title = element_blank())
 
 }
 }

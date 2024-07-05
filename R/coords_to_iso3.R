@@ -10,12 +10,10 @@
 #' @returns data.frame
 #'
 #' @examples
-#' \dontrun{
 #'
 #' coords_to_iso3(lon = template_WES_data$lon,
 #'                lat = template_WES_data$lat)
 #'
-#' }
 
 coords_to_iso3 <-  function(lon,
                             lat

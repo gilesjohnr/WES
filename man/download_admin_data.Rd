@@ -34,11 +34,11 @@ hosted at GitHub \href{https://github.com/wmgeolab/geoBoundaries/tree/9469f09592
 desired administrative level is not available the next most detailed administrative level is returned.
 }
 \examples{
+\donttest{
 
-\dontrun{
 download_admin_data(iso3 = 'TWN',
                     release = 'gbOpen',
-                    path_output = getwd())
+                    path_output = tempdir())
 }
 
 }

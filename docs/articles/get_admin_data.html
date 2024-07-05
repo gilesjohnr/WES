@@ -121,49 +121,45 @@ coordinates in an ES dataset.</p>
 <p>See below for an example of how to use the <code>WES</code> package
 to download geographic boundaries and identify the administrative units
 for a set of sampling sites.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="co"># Create an output directory</span></span>
-<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>path <span class="ot">&lt;-</span> <span class="fu">file.path</span>(<span class="fu">getwd</span>(), <span class="st">'tmp'</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="fu">dir.create</span>(path)</span>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="co"># Get ISO3 code for sample data</span></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>template_iso <span class="ot">&lt;-</span> <span class="fu">coords_to_iso3</span>(<span class="at">lon=</span>template_WES_data<span class="sc">$</span>lon,</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>                               <span class="at">lat=</span>template_WES_data<span class="sc">$</span>lat)</span>
 <span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="co"># Get ISO3 code for sample data</span></span>
-<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a>template_iso <span class="ot">&lt;-</span> <span class="fu">coords_to_iso3</span>(<span class="at">lon=</span>template_WES_data<span class="sc">$</span>lon,</span>
-<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a>                               <span class="at">lat=</span>template_WES_data<span class="sc">$</span>lat)</span>
-<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a><span class="co"># Download administrative unit data from geoBoundaries</span></span>
-<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a><span class="fu">download_admin_data</span>(<span class="at">iso3 =</span> template_iso<span class="sc">$</span>admin_0_iso[<span class="dv">1</span>], </span>
-<span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a>                    <span class="at">release=</span><span class="st">'gbOpen'</span>, </span>
-<span id="cb1-12"><a href="#cb1-12" tabindex="-1"></a>                    <span class="at">path_output =</span> path, </span>
-<span id="cb1-13"><a href="#cb1-13" tabindex="-1"></a>                    <span class="at">keep_geojson =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb1-14"><a href="#cb1-14" tabindex="-1"></a>                    <span class="at">simplified =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb1-15"><a href="#cb1-15" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" tabindex="-1"></a>trying URL <span class="st">'https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BGD/ADM4/geoBoundaries-BGD-ADM4_simplified.geojson'</span></span>
-<span id="cb1-17"><a href="#cb1-17" tabindex="-1"></a>Content type <span class="st">'application/octet-stream'</span> length <span class="dv">12493127</span> <span class="fu">bytes</span> (<span class="fl">11.9</span> MB)</span>
-<span id="cb1-18"><a href="#cb1-18" tabindex="-1"></a><span class="sc">==</span><span class="er">================================================</span></span>
-<span id="cb1-19"><a href="#cb1-19" tabindex="-1"></a>downloaded <span class="fl">11.9</span> MB</span>
-<span id="cb1-20"><a href="#cb1-20" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" tabindex="-1"></a>trying URL <span class="st">'https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BGD/ADM3/geoBoundaries-BGD-ADM3_simplified.geojson'</span></span>
-<span id="cb1-22"><a href="#cb1-22" tabindex="-1"></a>Content type <span class="st">'application/octet-stream'</span> length <span class="dv">3986002</span> <span class="fu">bytes</span> (<span class="fl">3.8</span> MB)</span>
-<span id="cb1-23"><a href="#cb1-23" tabindex="-1"></a><span class="sc">==</span><span class="er">================================================</span></span>
-<span id="cb1-24"><a href="#cb1-24" tabindex="-1"></a>downloaded <span class="fl">3.8</span> MB</span>
-<span id="cb1-25"><a href="#cb1-25" tabindex="-1"></a></span>
-<span id="cb1-26"><a href="#cb1-26" tabindex="-1"></a>trying URL <span class="st">'https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BGD/ADM2/geoBoundaries-BGD-ADM2_simplified.geojson'</span></span>
-<span id="cb1-27"><a href="#cb1-27" tabindex="-1"></a>Content type <span class="st">'application/octet-stream'</span> length <span class="dv">1686112</span> <span class="fu">bytes</span> (<span class="fl">1.6</span> MB)</span>
-<span id="cb1-28"><a href="#cb1-28" tabindex="-1"></a><span class="sc">==</span><span class="er">================================================</span></span>
-<span id="cb1-29"><a href="#cb1-29" tabindex="-1"></a>downloaded <span class="fl">1.6</span> MB</span>
-<span id="cb1-30"><a href="#cb1-30" tabindex="-1"></a></span>
-<span id="cb1-31"><a href="#cb1-31" tabindex="-1"></a>trying URL <span class="st">'https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BGD/ADM1/geoBoundaries-BGD-ADM1_simplified.geojson'</span></span>
-<span id="cb1-32"><a href="#cb1-32" tabindex="-1"></a>Content type <span class="st">'application/octet-stream'</span> length <span class="dv">92247</span> <span class="fu">bytes</span> (<span class="dv">90</span> KB)</span>
-<span id="cb1-33"><a href="#cb1-33" tabindex="-1"></a><span class="sc">==</span><span class="er">================================================</span></span>
-<span id="cb1-34"><a href="#cb1-34" tabindex="-1"></a>downloaded <span class="dv">90</span> KB</span>
-<span id="cb1-35"><a href="#cb1-35" tabindex="-1"></a></span>
-<span id="cb1-36"><a href="#cb1-36" tabindex="-1"></a>trying URL <span class="st">'https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BGD/ADM0/geoBoundaries-BGD-ADM0_simplified.geojson'</span></span>
-<span id="cb1-37"><a href="#cb1-37" tabindex="-1"></a>Content type <span class="st">'application/octet-stream'</span> length <span class="dv">57643</span> <span class="fu">bytes</span> (<span class="dv">56</span> KB)</span>
-<span id="cb1-38"><a href="#cb1-38" tabindex="-1"></a><span class="sc">==</span><span class="er">================================================</span></span>
-<span id="cb1-39"><a href="#cb1-39" tabindex="-1"></a>downloaded <span class="dv">56</span> KB</span>
-<span id="cb1-40"><a href="#cb1-40" tabindex="-1"></a></span>
-<span id="cb1-41"><a href="#cb1-41" tabindex="-1"></a>Done.</span>
-<span id="cb1-42"><a href="#cb1-42" tabindex="-1"></a>Data saved here<span class="sc">:</span> <span class="er">&lt;</span>working directory<span class="sc">&gt;</span><span class="er">/</span>tmp<span class="sc">/</span>BGD_admin_levels_simplified.shp</span></code></pre></div>
-<p>Administrative units from geoBoundaries are downloaded to the ‘tmp’
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="co"># Download administrative unit data from geoBoundaries</span></span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a><span class="fu">download_admin_data</span>(<span class="at">iso3 =</span> template_iso<span class="sc">$</span>admin_0_iso[<span class="dv">1</span>], </span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a>                    <span class="at">release=</span><span class="st">'gbOpen'</span>, </span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a>                    <span class="at">path_output =</span> <span class="fu">tempdir</span>(), </span>
+<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a>                    <span class="at">keep_geojson =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a>                    <span class="at">simplified =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" tabindex="-1"></a>trying URL <span class="st">'https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BGD/ADM4/geoBoundaries-BGD-ADM4_simplified.geojson'</span></span>
+<span id="cb1-13"><a href="#cb1-13" tabindex="-1"></a>Content type <span class="st">'application/octet-stream'</span> length <span class="dv">12493127</span> <span class="fu">bytes</span> (<span class="fl">11.9</span> MB)</span>
+<span id="cb1-14"><a href="#cb1-14" tabindex="-1"></a><span class="sc">==</span><span class="er">================================================</span></span>
+<span id="cb1-15"><a href="#cb1-15" tabindex="-1"></a>downloaded <span class="fl">11.9</span> MB</span>
+<span id="cb1-16"><a href="#cb1-16" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" tabindex="-1"></a>trying URL <span class="st">'https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BGD/ADM3/geoBoundaries-BGD-ADM3_simplified.geojson'</span></span>
+<span id="cb1-18"><a href="#cb1-18" tabindex="-1"></a>Content type <span class="st">'application/octet-stream'</span> length <span class="dv">3986002</span> <span class="fu">bytes</span> (<span class="fl">3.8</span> MB)</span>
+<span id="cb1-19"><a href="#cb1-19" tabindex="-1"></a><span class="sc">==</span><span class="er">================================================</span></span>
+<span id="cb1-20"><a href="#cb1-20" tabindex="-1"></a>downloaded <span class="fl">3.8</span> MB</span>
+<span id="cb1-21"><a href="#cb1-21" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" tabindex="-1"></a>trying URL <span class="st">'https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BGD/ADM2/geoBoundaries-BGD-ADM2_simplified.geojson'</span></span>
+<span id="cb1-23"><a href="#cb1-23" tabindex="-1"></a>Content type <span class="st">'application/octet-stream'</span> length <span class="dv">1686112</span> <span class="fu">bytes</span> (<span class="fl">1.6</span> MB)</span>
+<span id="cb1-24"><a href="#cb1-24" tabindex="-1"></a><span class="sc">==</span><span class="er">================================================</span></span>
+<span id="cb1-25"><a href="#cb1-25" tabindex="-1"></a>downloaded <span class="fl">1.6</span> MB</span>
+<span id="cb1-26"><a href="#cb1-26" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" tabindex="-1"></a>trying URL <span class="st">'https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BGD/ADM1/geoBoundaries-BGD-ADM1_simplified.geojson'</span></span>
+<span id="cb1-28"><a href="#cb1-28" tabindex="-1"></a>Content type <span class="st">'application/octet-stream'</span> length <span class="dv">92247</span> <span class="fu">bytes</span> (<span class="dv">90</span> KB)</span>
+<span id="cb1-29"><a href="#cb1-29" tabindex="-1"></a><span class="sc">==</span><span class="er">================================================</span></span>
+<span id="cb1-30"><a href="#cb1-30" tabindex="-1"></a>downloaded <span class="dv">90</span> KB</span>
+<span id="cb1-31"><a href="#cb1-31" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" tabindex="-1"></a>trying URL <span class="st">'https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BGD/ADM0/geoBoundaries-BGD-ADM0_simplified.geojson'</span></span>
+<span id="cb1-33"><a href="#cb1-33" tabindex="-1"></a>Content type <span class="st">'application/octet-stream'</span> length <span class="dv">57643</span> <span class="fu">bytes</span> (<span class="dv">56</span> KB)</span>
+<span id="cb1-34"><a href="#cb1-34" tabindex="-1"></a><span class="sc">==</span><span class="er">================================================</span></span>
+<span id="cb1-35"><a href="#cb1-35" tabindex="-1"></a>downloaded <span class="dv">56</span> KB</span>
+<span id="cb1-36"><a href="#cb1-36" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" tabindex="-1"></a>Done.</span>
+<span id="cb1-38"><a href="#cb1-38" tabindex="-1"></a>Data saved here<span class="sc">:</span> <span class="er">&lt;</span>temp directory<span class="sc">&gt;</span><span class="er">/</span>BGD_admin_levels_simplified.shp</span></code></pre></div>
+<p>Administrative units from geoBoundaries are downloaded to the temp
 directory. Individual GeoJSON files for each administrative level are
 downloaded first, and then a composite ESRI Shapefile is saved to the
 output directory.</p>
@@ -171,19 +167,20 @@ output directory.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="co"># Relate downloaded administrative data to sampling sites</span></span>
 <span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="fu">get_admin_data</span>(<span class="at">lon =</span> template_WES_data<span class="sc">$</span>lon,</span>
 <span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>               <span class="at">lat =</span> template_WES_data<span class="sc">$</span>lat,</span>
-<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a>               <span class="at">path_admin_data =</span> <span class="fu">file.path</span>(path, <span class="st">'BGD_admin_levels_simplified.shp'</span>))</span>
-<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a>Loading admin data...</span>
-<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a>Extracting admin info at point locations...</span>
-<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a>Done.</span>
-<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a>  id   lon   lat    admin_0 admin_1 admin_2 admin_3           admin_4 iso3</span>
-<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a><span class="dv">1</span>  <span class="dv">1</span> <span class="fl">90.37</span> <span class="fl">23.80</span> Bangledesh   Dhaka   Dhaka Pallabi Ward No<span class="dv">-14</span> (part)  BGD</span>
-<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a><span class="dv">2</span>  <span class="dv">2</span> <span class="fl">90.38</span> <span class="fl">23.80</span> Bangledesh   Dhaka   Dhaka  Kafrul        Ward No<span class="dv">-16</span>  BGD</span>
-<span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a><span class="dv">3</span>  <span class="dv">3</span> <span class="fl">90.37</span> <span class="fl">23.81</span> Bangledesh   Dhaka   Dhaka Pallabi        Ward No<span class="dv">-03</span>  BGD</span>
-<span id="cb2-13"><a href="#cb2-13" tabindex="-1"></a>             geometry</span>
-<span id="cb2-14"><a href="#cb2-14" tabindex="-1"></a><span class="dv">1</span>  <span class="fu">POINT</span> (<span class="fl">90.37</span> <span class="fl">23.8</span>)</span>
-<span id="cb2-15"><a href="#cb2-15" tabindex="-1"></a><span class="dv">2</span>  <span class="fu">POINT</span> (<span class="fl">90.38</span> <span class="fl">23.8</span>)</span>
-<span id="cb2-16"><a href="#cb2-16" tabindex="-1"></a><span class="dv">3</span> <span class="fu">POINT</span> (<span class="fl">90.37</span> <span class="fl">23.81</span>)</span></code></pre></div>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a>               <span class="at">path_admin_data =</span> <span class="fu">file.path</span>(<span class="fu">tempdir</span>(), <span class="st">'BGD_admin_levels_simplified.shp'</span>))</span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a>Loading admin data...</span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a>Extracting admin info at point locations...</span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a>Done.</span>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a>  id   lon   lat    admin_0 admin_1 admin_2 admin_3           admin_4 iso3</span>
+<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a><span class="dv">1</span>  <span class="dv">1</span> <span class="fl">90.37</span> <span class="fl">23.80</span> Bangledesh   Dhaka   Dhaka Pallabi Ward No<span class="dv">-14</span> (part)  BGD</span>
+<span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a><span class="dv">2</span>  <span class="dv">2</span> <span class="fl">90.38</span> <span class="fl">23.80</span> Bangledesh   Dhaka   Dhaka  Kafrul        Ward No<span class="dv">-16</span>  BGD</span>
+<span id="cb2-13"><a href="#cb2-13" tabindex="-1"></a><span class="dv">3</span>  <span class="dv">3</span> <span class="fl">90.37</span> <span class="fl">23.81</span> Bangledesh   Dhaka   Dhaka Pallabi        Ward No<span class="dv">-03</span>  BGD</span>
+<span id="cb2-14"><a href="#cb2-14" tabindex="-1"></a>             geometry</span>
+<span id="cb2-15"><a href="#cb2-15" tabindex="-1"></a><span class="dv">1</span>  <span class="fu">POINT</span> (<span class="fl">90.37</span> <span class="fl">23.8</span>)</span>
+<span id="cb2-16"><a href="#cb2-16" tabindex="-1"></a><span class="dv">2</span>  <span class="fu">POINT</span> (<span class="fl">90.38</span> <span class="fl">23.8</span>)</span>
+<span id="cb2-17"><a href="#cb2-17" tabindex="-1"></a><span class="dv">3</span> <span class="fu">POINT</span> (<span class="fl">90.37</span> <span class="fl">23.81</span>)</span></code></pre></div>
 <p>And the following plotting code will visualize the sampling sites and
 associated administrative units.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
@@ -192,7 +189,7 @@ associated administrative units.</p>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://wilkelab.org/cowplot/" class="external-link">cowplot</a></span><span class="op">)</span></span>
 <span></span>
-<span><span class="va">shapefile_path</span> <span class="op">&lt;-</span> <span class="st">"&lt;working directory&gt;/tmp/BGD_admin_levels_simplified.shp"</span></span>
+<span><span class="va">shapefile_path</span> <span class="op">&lt;-</span> <span class="st">"&lt;temp directory&gt;/BGD_admin_levels_simplified.shp"</span></span>
 <span><span class="va">shapefile</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_read.html" class="external-link">st_read</a></span><span class="op">(</span><span class="va">shapefile_path</span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">coordinates</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">template_WES_data</span><span class="op">$</span><span class="va">lon</span>, y <span class="op">=</span> <span class="va">template_WES_data</span><span class="op">$</span><span class="va">lat</span><span class="op">)</span></span>

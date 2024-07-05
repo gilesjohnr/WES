@@ -15,11 +15,11 @@
 #' @returns Character string giving path to downloaded data.
 #'
 #' @examples
+#' \donttest{
 #'
-#' \dontrun{
 #' download_admin_data(iso3 = 'TWN',
 #'                     release = 'gbOpen',
-#'                     path_output = getwd())
+#'                     path_output = tempdir())
 #' }
 #'
 

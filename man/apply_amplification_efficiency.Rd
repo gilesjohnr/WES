@@ -19,9 +19,6 @@ This function applies the \code{est_amplification_efficiency()} function to a da
 standardized format shown in the \code{template_WES_standard_curve} data set.
 }
 \examples{
-\dontrun{
-
 apply_amplification_efficiency(template_WES_standard_curve)
 
-}
 }

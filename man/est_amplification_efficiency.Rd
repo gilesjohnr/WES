@@ -21,7 +21,6 @@ Note that the model uses a log base 2 transform which assumes that serial diluti
 requires a minimum of 5 observations.
 }
 \examples{
-\dontrun{
 
 sel <- template_WES_standard_curve$target_name == 'target_1'
 tmp_n_copies <- template_WES_standard_curve$n_copies[sel]
@@ -30,5 +29,4 @@ tmp_ct_value <- template_WES_standard_curve$ct_value[sel]
 est_amplification_efficiency(n_copies = tmp_n_copies,
                              ct_value = tmp_ct_value)
 
-}
 }

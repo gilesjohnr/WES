@@ -19,25 +19,12 @@
 #' @returns data.frame
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #'
 #' d <- get_esi_data(lon = c(-54.9857, -52.9857),
-#' lat = c(-5.9094, -25.8756),
-#' dates = c("2020-06-01", "2020-10-31"),
-#' intervals = c(5,10,20))
-#'
-#' head(d)
-#'
-#' ggplot2::ggplot(d, aes(x = date)) +
-#'      geom_line(aes(y = esi_daily_avg_20, col='Average ESI 20 days')) +
-#'      geom_line(aes(y = esi_daily_avg_10, col='Average ESI 10 days')) +
-#'      geom_line(aes(y = esi_daily_avg_5, col='Average ESI 5 days')) +
-#'      geom_line(aes(y = esi_daily_avg)) +
-#'      facet_grid(rows=vars(id)) +
-#'      labs(x="", y = "Evaporative Stress Index (ESI)") +
-#'      theme_bw() +
-#'      theme(legend.position = 'bottom',
-#'            legend.title = element_blank())
+#'                   lat = c(-5.9094, -25.8756),
+#'                   dates = c("2020-06-01", "2020-10-31"),
+#'                   intervals = c(5,10,20))
 #'
 #' }
 

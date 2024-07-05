@@ -2,6 +2,7 @@
 [![R-CMD-check](https://github.com/gilesjohnr/WES/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/gilesjohnr/WES/actions/workflows/R-CMD-check.yaml)
 [![pkgdown](https://github.com/gilesjohnr/WES/actions/workflows/pkgdown.yaml/badge.svg?branch=main)](https://github.com/gilesjohnr/WES/actions/workflows/pkgdown.yaml)
 [![pages-build-deployment](https://github.com/gilesjohnr/WES/actions/workflows/pages/pages-build-deployment/badge.svg?branch=gh-pages)](https://github.com/gilesjohnr/WES/actions/workflows/pages/pages-build-deployment)
+[![CRAN status](https://www.r-pkg.org/badges/version/WES)](https://CRAN.R-project.org/package=WES)
 <!-- badges: end -->
 
 # **WES**: an R package for Analyzing Environmental Sampling Data <img src="man/figures/logo.png" align="right" height="150" alt="" />

@@ -27,21 +27,19 @@ residing within a given radius around each sampling site. Intermediate spatial v
 the directory specified in \code{path_output}.
 }
 \examples{
-\dontrun{
-
-dir.create(file.path(getwd(), 'tmp'))
+\donttest{
 
 download_worldpop_data(iso3 = 'BGD',
                        year = 2020,
                        constrained = FALSE,
                        UN_adjusted = FALSE,
-                       path_output = file.path(getwd(), 'tmp'))
+                       path_output = tempdir())
 
 get_population_radius(lon = template_WES_data$lon,
                       lat = template_WES_data$lat,
                       radius = 100,
-                      path_pop_raster = file.path(getwd(), 'tmp/bgd_ppp_2020.tif'),
-                      path_output = file.path(getwd(), 'tmp'))
+                      path_pop_raster = file.path(tempdir(), 'bgd_ppp_2020.tif'),
+                      path_output = tempdir())
 
 }
 }
