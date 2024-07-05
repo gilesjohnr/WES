@@ -18,7 +18,7 @@
 #' @returns Character string giving path to downloaded data.
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #'
 #' # Download population data for Taiwan
 #' download_worldpop_data(iso3 = 'TWN',

@@ -14,7 +14,7 @@
 #' @return A \code{data.frame} containing the total population counts for the given radius around each sampling site.
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #'
 #' download_worldpop_data(iso3 = 'BGD',
 #'                        year = 2020,

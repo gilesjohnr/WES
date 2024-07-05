@@ -22,7 +22,7 @@ DEM which are accessed through the Amazon Web Services (AWS) API and the \href{h
 R package.
 }
 \examples{
-\donttest{
+\dontrun{
 
 get_elevation_data(lon = template_WES_data$lon,
                    lat = template_WES_data$lat)

@@ -42,7 +42,7 @@ Note that the delineation of catchments along streams (or sewer networks) still 
 from the provided DEM. Intermediate spatial variables are written to the directory specified in \code{path_output}.
 }
 \examples{
-\donttest{
+\dontrun{
 
 download_worldpop_data(iso3 = 'BGD',
                        year = 2020,

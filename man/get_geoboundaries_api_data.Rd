@@ -23,7 +23,7 @@ If data is not found at the specified administrative level, it attempts to retri
 is found or the lowest level is reached.
 }
 \examples{
-\donttest{
+\dontrun{
 
 tmp <- get_geoboundaries_api_data('gbOpen', 'ITA', 2)
 print(tmp)

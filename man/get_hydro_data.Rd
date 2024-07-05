@@ -29,7 +29,7 @@ and the suite of variables are calculated using functions from the \href{https:/
 R frontend.
 }
 \examples{
-\donttest{
+\dontrun{
 
 download_elevation_data(lon = template_WES_data$lon,
                         lat = template_WES_data$lat,

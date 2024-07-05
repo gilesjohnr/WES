@@ -13,7 +13,7 @@
 #' @returns data.frame
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #'
 #' d <- get_river_discharge_data(lon = c(-54.9857, -52.9857),
 #'                               lat = c(-10.9094, -25.8756),

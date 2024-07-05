@@ -31,7 +31,7 @@ will calculate the cumulative sum of precipitation in millimeters (mm) for the p
 days for each location.
 }
 \examples{
-\donttest{
+\dontrun{
 
 d <- get_precip_data(lon = c(-56.0281, -54.9857),
                      lat = c(-2.9094, -2.8756),

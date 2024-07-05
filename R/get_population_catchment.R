@@ -21,7 +21,7 @@
 #' @return A \code{data.frame} containing the catchment area and population counts for each sampling site.
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #'
 #' download_worldpop_data(iso3 = 'BGD',
 #'                        year = 2020,

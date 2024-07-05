@@ -22,7 +22,7 @@ This function takes a set of longitude and latitude coordinates and retrieves th
 units that each point lies within.
 }
 \examples{
-\donttest{
+\dontrun{
 
 download_admin_data(iso3 = "BGD", path_output = tempdir())
 

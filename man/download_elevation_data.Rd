@@ -23,7 +23,7 @@ Shuttle Radar Topography Mission (SRTM) DEM, which is accessible through the Ama
 \href{https://CRAN.R-project.org/package=elevatr}{\code{elevatr}} R package.
 }
 \examples{
-\donttest{
+\dontrun{
 
 download_elevation_data(lon = template_WES_data$lon,
                         lat = template_WES_data$lat,
