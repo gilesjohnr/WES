@@ -102,11 +102,17 @@ and calculates basic sample sizes and detection rates for all gene targets.</p>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
-<span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="fu">calc_sample_sizes</span><span class="op">(</span><span class="va">template_WES_data</span><span class="op">)</span></span></span>
-<span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="op">}</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">calc_sample_sizes</span><span class="op">(</span><span class="va">template_WES_data</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   pathogen n_NA n_total n_lt_cutoff n_ge_cutoff observation_rate detection_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 target_0  790    1290        1290           0             0.62              1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 target_1  417     623         623           0             0.60              1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 target_2  372     668         668           0             0.64              1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4 target_3  386     654         654           0             0.63              1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   ct_median ct_hpd_025 ct_hpd_975</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1     30.43      28.78      33.96</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2     29.26      24.99      33.66</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3     32.33      29.40      35.29</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4     29.64      27.00      31.80</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

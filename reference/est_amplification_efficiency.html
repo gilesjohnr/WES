@@ -108,16 +108,23 @@ requires a minimum of 5 observations.</p>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
-<span class="r-in"><span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="va">sel</span> <span class="op">&lt;-</span> <span class="va">template_WES_standard_curve</span><span class="op">$</span><span class="va">target_name</span> <span class="op">==</span> <span class="st">'target_1'</span></span></span>
 <span class="r-in"><span><span class="va">tmp_n_copies</span> <span class="op">&lt;-</span> <span class="va">template_WES_standard_curve</span><span class="op">$</span><span class="va">n_copies</span><span class="op">[</span><span class="va">sel</span><span class="op">]</span></span></span>
 <span class="r-in"><span><span class="va">tmp_ct_value</span> <span class="op">&lt;-</span> <span class="va">template_WES_standard_curve</span><span class="op">$</span><span class="va">ct_value</span><span class="op">[</span><span class="va">sel</span><span class="op">]</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">est_amplification_efficiency</span><span class="op">(</span>n_copies <span class="op">=</span> <span class="va">tmp_n_copies</span>,</span></span>
 <span class="r-in"><span>                             ct_value <span class="op">=</span> <span class="va">tmp_ct_value</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $mean</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1.097074</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $ci_lo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1.347295</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $ci_hi</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.8468532</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

@@ -126,8 +126,7 @@ must be provided. The result is a data.frame containing a 'delta_delta_ct' colum
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
-<span class="r-in"><span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="va">pae</span> <span class="op">&lt;-</span> <span class="fu"><a href="apply_amplification_efficiency.html">apply_amplification_efficiency</a></span><span class="op">(</span><span class="va">template_WES_standard_curve</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="va">ddct_standard</span> <span class="op">&lt;-</span> <span class="fu">apply_delta_delta_ct</span><span class="op">(</span>df <span class="op">=</span> <span class="va">template_WES_data</span>,</span></span>
@@ -139,8 +138,6 @@ must be provided. The result is a data.frame containing a 'delta_delta_ct' colum
 <span class="r-in"><span>                                      reference_names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="st">'target_0'</span>, <span class="fl">3</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>                                      pae_names <span class="op">=</span> <span class="va">pae</span><span class="op">$</span><span class="va">target_name</span>,</span></span>
 <span class="r-in"><span>                                      pae_values <span class="op">=</span> <span class="va">pae</span><span class="op">$</span><span class="va">mean</span><span class="op">)</span></span></span>
-<span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="op">}</span></span></span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>

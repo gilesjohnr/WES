@@ -155,26 +155,23 @@ the methods stated above.</p>
 <span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a><span class="dv">5</span> <span class="dv">2020-03-07</span>           <span class="dv">1</span> <span class="fl">23.8</span> <span class="fl">90.37</span>    target_1 <span class="fl">31.60111</span></span>
 <span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a><span class="dv">6</span> <span class="dv">2020-03-07</span>           <span class="dv">1</span> <span class="fl">23.8</span> <span class="fl">90.37</span>    target_1 <span class="fl">32.20208</span></span>
 <span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a></span>
-<span id="cb2-13"><a href="#cb2-13" tabindex="-1"></a><span class="co"># Create a directory to download spatial data and save intermediate output</span></span>
-<span id="cb2-14"><a href="#cb2-14" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="fu">file.path</span>(<span class="fu">getwd</span>(), <span class="st">'tmp'</span>))</span>
-<span id="cb2-15"><a href="#cb2-15" tabindex="-1"></a></span>
-<span id="cb2-16"><a href="#cb2-16" tabindex="-1"></a><span class="co"># Download population raster data from Worldpop</span></span>
-<span id="cb2-17"><a href="#cb2-17" tabindex="-1"></a>WES<span class="sc">::</span><span class="fu">download_worldpop_data</span>(</span>
-<span id="cb2-18"><a href="#cb2-18" tabindex="-1"></a>     <span class="at">iso3 =</span> <span class="st">'BGD'</span>,</span>
-<span id="cb2-19"><a href="#cb2-19" tabindex="-1"></a>     <span class="at">year =</span> <span class="dv">2020</span>,</span>
-<span id="cb2-20"><a href="#cb2-20" tabindex="-1"></a>     <span class="at">constrained =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb2-21"><a href="#cb2-21" tabindex="-1"></a>     <span class="at">UN_adjusted =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb2-22"><a href="#cb2-22" tabindex="-1"></a>     <span class="at">path_output =</span> <span class="fu">file.path</span>(<span class="fu">getwd</span>(), <span class="st">'tmp'</span>)</span>
-<span id="cb2-23"><a href="#cb2-23" tabindex="-1"></a>)</span>
-<span id="cb2-24"><a href="#cb2-24" tabindex="-1"></a></span>
-<span id="cb2-25"><a href="#cb2-25" tabindex="-1"></a><span class="co"># Download a DEM for the area surrounding sampling sites</span></span>
-<span id="cb2-26"><a href="#cb2-26" tabindex="-1"></a>WES<span class="sc">::</span><span class="fu">download_elevation_data</span>(</span>
-<span id="cb2-27"><a href="#cb2-27" tabindex="-1"></a>     <span class="at">lon =</span> df<span class="sc">$</span>lon,</span>
-<span id="cb2-28"><a href="#cb2-28" tabindex="-1"></a>     <span class="at">lat =</span> df<span class="sc">$</span>lat,</span>
-<span id="cb2-29"><a href="#cb2-29" tabindex="-1"></a>     <span class="at">path_output =</span> <span class="fu">file.path</span>(<span class="fu">getwd</span>(), <span class="st">'tmp'</span>)</span>
-<span id="cb2-30"><a href="#cb2-30" tabindex="-1"></a>)</span></code></pre></div>
+<span id="cb2-13"><a href="#cb2-13" tabindex="-1"></a><span class="co"># Download population raster data from Worldpop</span></span>
+<span id="cb2-14"><a href="#cb2-14" tabindex="-1"></a>WES<span class="sc">::</span><span class="fu">download_worldpop_data</span>(</span>
+<span id="cb2-15"><a href="#cb2-15" tabindex="-1"></a>     <span class="at">iso3 =</span> <span class="st">'BGD'</span>,</span>
+<span id="cb2-16"><a href="#cb2-16" tabindex="-1"></a>     <span class="at">year =</span> <span class="dv">2020</span>,</span>
+<span id="cb2-17"><a href="#cb2-17" tabindex="-1"></a>     <span class="at">constrained =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb2-18"><a href="#cb2-18" tabindex="-1"></a>     <span class="at">UN_adjusted =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb2-19"><a href="#cb2-19" tabindex="-1"></a>     <span class="at">path_output =</span> <span class="fu">tempdir</span>()</span>
+<span id="cb2-20"><a href="#cb2-20" tabindex="-1"></a>)</span>
+<span id="cb2-21"><a href="#cb2-21" tabindex="-1"></a></span>
+<span id="cb2-22"><a href="#cb2-22" tabindex="-1"></a><span class="co"># Download a DEM for the area surrounding sampling sites</span></span>
+<span id="cb2-23"><a href="#cb2-23" tabindex="-1"></a>WES<span class="sc">::</span><span class="fu">download_elevation_data</span>(</span>
+<span id="cb2-24"><a href="#cb2-24" tabindex="-1"></a>     <span class="at">lon =</span> df<span class="sc">$</span>lon,</span>
+<span id="cb2-25"><a href="#cb2-25" tabindex="-1"></a>     <span class="at">lat =</span> df<span class="sc">$</span>lat,</span>
+<span id="cb2-26"><a href="#cb2-26" tabindex="-1"></a>     <span class="at">path_output =</span> <span class="fu">tempdir</span>()</span>
+<span id="cb2-27"><a href="#cb2-27" tabindex="-1"></a>)</span></code></pre></div>
 <p>Population and Digital Elevation Model (DEM) are downloaded to the
-‘tmp’ directory.</p>
+temp directory.</p>
 <p><img src="../reference/figures/dir_download.png" style="width:70.0%"></p>
 <p><br></p>
 </div>
@@ -185,10 +182,10 @@ the methods stated above.</p>
 <span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a>pop_catchment <span class="ot">&lt;-</span> WES<span class="sc">::</span><span class="fu">get_population_catchment</span>(</span>
 <span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a>     <span class="at">lon =</span> df<span class="sc">$</span>lon,</span>
 <span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a>     <span class="at">lat =</span> df<span class="sc">$</span>lat,</span>
-<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a>     <span class="at">path_pop_raster =</span> <span class="fu">file.path</span>(<span class="fu">getwd</span>(), <span class="st">'tmp/bgd_ppp_2020.tif'</span>),</span>
-<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a>     <span class="at">path_dem_raster =</span> <span class="fu">file.path</span>(<span class="fu">getwd</span>(), <span class="st">'tmp/dem.tif'</span>),</span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a>     <span class="at">path_pop_raster =</span> <span class="fu">file.path</span>(<span class="fu">tempdir</span>(), <span class="st">'bgd_ppp_2020.tif'</span>),</span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a>     <span class="at">path_dem_raster =</span> <span class="fu">file.path</span>(<span class="fu">tempdir</span>(), <span class="st">'dem.tif'</span>),</span>
 <span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a>     <span class="at">path_stream_shp =</span> <span class="cn">NULL</span>,</span>
-<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a>     <span class="at">path_output =</span> <span class="fu">file.path</span>(<span class="fu">getwd</span>(), <span class="st">'tmp'</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a>     <span class="at">path_output =</span> <span class="fu">tempdir</span>()</span>
 <span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a>)</span>
 <span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a></span>
 <span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a>pop_catchment</span>
@@ -202,8 +199,8 @@ the methods stated above.</p>
 <span id="cb3-19"><a href="#cb3-19" tabindex="-1"></a>     <span class="at">lon =</span> df<span class="sc">$</span>lon,</span>
 <span id="cb3-20"><a href="#cb3-20" tabindex="-1"></a>     <span class="at">lat =</span> df<span class="sc">$</span>lat,</span>
 <span id="cb3-21"><a href="#cb3-21" tabindex="-1"></a>     <span class="at">radius =</span> <span class="dv">300</span>,</span>
-<span id="cb3-22"><a href="#cb3-22" tabindex="-1"></a>     <span class="at">path_pop_raster =</span> <span class="fu">file.path</span>(<span class="fu">getwd</span>(), <span class="st">'tmp/bgd_ppp_2020.tif'</span>),</span>
-<span id="cb3-23"><a href="#cb3-23" tabindex="-1"></a>     <span class="at">path_output =</span> <span class="fu">file.path</span>(<span class="fu">getwd</span>(), <span class="st">'tmp'</span>)</span>
+<span id="cb3-22"><a href="#cb3-22" tabindex="-1"></a>     <span class="at">path_pop_raster =</span> <span class="fu">file.path</span>(<span class="fu">tempdir</span>(), <span class="st">'bgd_ppp_2020.tif'</span>),</span>
+<span id="cb3-23"><a href="#cb3-23" tabindex="-1"></a>     <span class="at">path_output =</span> <span class="fu">tempdir</span>()</span>
 <span id="cb3-24"><a href="#cb3-24" tabindex="-1"></a>)</span>
 <span id="cb3-25"><a href="#cb3-25" tabindex="-1"></a></span>
 <span id="cb3-26"><a href="#cb3-26" tabindex="-1"></a>pop_radius</span>
@@ -226,8 +223,8 @@ the methods stated above.</p>
 <span id="cb3-43"><a href="#cb3-43" tabindex="-1"></a><span class="dv">5</span> <span class="fl">90.37</span> <span class="fl">23.8</span> <span class="dv">2020-03-07</span>           <span class="dv">1</span>    target_1 <span class="fl">31.60111</span>              <span class="fl">712.2</span>                <span class="dv">69635</span>                 <span class="dv">62868</span></span>
 <span id="cb3-44"><a href="#cb3-44" tabindex="-1"></a><span class="dv">6</span> <span class="fl">90.37</span> <span class="fl">23.8</span> <span class="dv">2020-03-07</span>           <span class="dv">1</span>    target_1 <span class="fl">32.20208</span>              <span class="fl">712.2</span>                <span class="dv">69635</span>                 <span class="dv">62868</span></span></code></pre></div>
 <p>The intermediate spatial data produced in the delineation of drainage
-catchments and calculation of population size are also saved to the
-‘tmp’ output directory.</p>
+catchments and calculation of population size are also saved to the temp
+output directory.</p>
 <p><img src="../reference/figures/dir_output.png" style="width:70.0%"></p>
 <p><br></p>
 </div>
@@ -240,12 +237,12 @@ above.</p>
 <div class="sourceCode" id="cb4" eval="FALSE"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">pts</span> <span class="op">&lt;-</span> <span class="fu">sp</span><span class="fu">::</span><span class="fu"><a href="https://edzer.github.io/sp/reference/SpatialPoints.html" class="external-link">SpatialPoints</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">pop_catchment</span><span class="op">$</span><span class="va">lon</span>, y<span class="op">=</span><span class="va">pop_catchment</span><span class="op">$</span><span class="va">lat</span><span class="op">)</span>, proj4string<span class="op">=</span><span class="fu">sp</span><span class="fu">::</span><span class="fu"><a href="https://edzer.github.io/sp/reference/CRS-class.html" class="external-link">CRS</a></span><span class="op">(</span><span class="st">"+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
-<span><span class="va">rast_dem</span> <span class="op">&lt;-</span> <span class="fu">raster</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/raster/man/raster.html" class="external-link">raster</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/file.path.html" class="external-link">file.path</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/getwd.html" class="external-link">getwd</a></span><span class="op">(</span><span class="op">)</span>, <span class="st">'tmp/dem.tif'</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="va">rast_pop</span> <span class="op">&lt;-</span> <span class="fu">raster</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/raster/man/raster.html" class="external-link">raster</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/file.path.html" class="external-link">file.path</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/getwd.html" class="external-link">getwd</a></span><span class="op">(</span><span class="op">)</span>, <span class="st">'tmp/bgd_ppp_2020_crop.tif'</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">rast_dem</span> <span class="op">&lt;-</span> <span class="fu">raster</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/raster/man/raster.html" class="external-link">raster</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/file.path.html" class="external-link">file.path</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/tempfile.html" class="external-link">tempdir</a></span><span class="op">(</span><span class="op">)</span>, <span class="st">'dem.tif'</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">rast_pop</span> <span class="op">&lt;-</span> <span class="fu">raster</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/raster/man/raster.html" class="external-link">raster</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/file.path.html" class="external-link">file.path</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/tempfile.html" class="external-link">tempdir</a></span><span class="op">(</span><span class="op">)</span>, <span class="st">'bgd_ppp_2020_crop.tif'</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
-<span><span class="va">shp_streams</span> <span class="op">&lt;-</span> <span class="fu">sf</span><span class="fu">::</span><span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_read.html" class="external-link">st_read</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/file.path.html" class="external-link">file.path</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/getwd.html" class="external-link">getwd</a></span><span class="op">(</span><span class="op">)</span>, <span class="st">'tmp/streams.shp'</span><span class="op">)</span>, quiet<span class="op">=</span><span class="cn">TRUE</span>, crs <span class="op">=</span> <span class="st">"+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"</span><span class="op">)</span></span>
-<span><span class="va">shp_catchments</span> <span class="op">&lt;-</span> <span class="fu">sf</span><span class="fu">::</span><span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_read.html" class="external-link">st_read</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/file.path.html" class="external-link">file.path</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/getwd.html" class="external-link">getwd</a></span><span class="op">(</span><span class="op">)</span>, <span class="st">'tmp/catchments.shp'</span><span class="op">)</span>, quiet<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span>
-<span><span class="va">shp_radius</span> <span class="op">&lt;-</span> <span class="fu">sf</span><span class="fu">::</span><span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_read.html" class="external-link">st_read</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/file.path.html" class="external-link">file.path</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/getwd.html" class="external-link">getwd</a></span><span class="op">(</span><span class="op">)</span>, <span class="st">'tmp/points_buffer_300.shp'</span><span class="op">)</span>, quiet<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="va">shp_streams</span> <span class="op">&lt;-</span> <span class="fu">sf</span><span class="fu">::</span><span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_read.html" class="external-link">st_read</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/file.path.html" class="external-link">file.path</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/tempfile.html" class="external-link">tempdir</a></span><span class="op">(</span><span class="op">)</span>, <span class="st">'streams.shp'</span><span class="op">)</span>, quiet<span class="op">=</span><span class="cn">TRUE</span>, crs <span class="op">=</span> <span class="st">"+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"</span><span class="op">)</span></span>
+<span><span class="va">shp_catchments</span> <span class="op">&lt;-</span> <span class="fu">sf</span><span class="fu">::</span><span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_read.html" class="external-link">st_read</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/file.path.html" class="external-link">file.path</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/tempfile.html" class="external-link">tempdir</a></span><span class="op">(</span><span class="op">)</span>, <span class="st">'catchments.shp'</span><span class="op">)</span>, quiet<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="va">shp_radius</span> <span class="op">&lt;-</span> <span class="fu">sf</span><span class="fu">::</span><span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_read.html" class="external-link">st_read</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/file.path.html" class="external-link">file.path</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/tempfile.html" class="external-link">tempdir</a></span><span class="op">(</span><span class="op">)</span>, <span class="st">'points_buffer_300.shp'</span><span class="op">)</span>, quiet<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span>
 <span></span>
 <span></span>
 <span><span class="va">tmp</span> <span class="op">&lt;-</span> <span class="fu">raster</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html" class="external-link">as.data.frame</a></span><span class="op">(</span><span class="va">rast_dem</span>, xy<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span>
