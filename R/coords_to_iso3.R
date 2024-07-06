@@ -11,8 +11,8 @@
 #'
 #' @examples
 #'
-#' coords_to_iso3(lon = template_WES_data$lon,
-#'                lat = template_WES_data$lat)
+#' coords_to_iso3(lon = c(90.37, 90.38, 90.37),
+#'                lat = c(23.80, 23.80, 23.81))
 #'
 
 coords_to_iso3 <-  function(lon,

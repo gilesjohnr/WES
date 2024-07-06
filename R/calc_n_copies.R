@@ -14,13 +14,15 @@
 #'
 #' @examples
 #'
-#' df <- template_WES_data
+#' df <- template_WES_data[template_WES_data$target_name == 'target_1',]
+#' sc <- template_WES_standard_curve[template_WES_standard_curve$target_name == 'target_1',]
 #'
-#' test <- calc_n_copies(ct_values = df$ct_value,
-#'                       target_names = df$target_name,
-#'                       standard_curves = template_WES_standard_curve)
+#' tmp <- calc_n_copies(ct_values = df$ct_value,
+#'                      target_names = df$target_name,
+#'                      standard_curves = sc)
 #'
-#' df$n_copies <- test
+#' df$n_copies <- tmp
+#' head(df)
 #'
 
 calc_n_copies <- function(ct_values,
