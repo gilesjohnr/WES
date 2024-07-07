@@ -15,7 +15,7 @@ Description: The WES R package provides reproducible functions for collating and
      sewage, water, air, soil, or surfaces) to monitor the presence of pathogens in 
      the environment. Analysis of ES data often requires the calculation of derivative 
      qPCR variables, normalizing observations, and analyzing sampling site characteristics. To help reduce the complexity of these analyses we have implemented tools that assist with establishing standardized ES data formats, absolute and relative quantification of qPCR data, estimation of qPCR amplification efficiency, and collating open-source spatial data for sampling sites.
-URL: https://www.r-wes.com/, https://gilesjohnr.github.io/WES/
+URL: https://www.r-wes.com/
 License: CC BY 4.0
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.1
