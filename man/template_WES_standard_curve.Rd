@@ -20,7 +20,7 @@ template_WES_standard_curve
 }
 \description{
 The \code{template_WES_standard_curve} object provides a template of the data format required
-by the \code{WES} package for standard curve values. These data are only required when calculating the
+by the 'WES' package for standard curve values. These data are only required when calculating the
 number of gene copies using the \code{calc_n_copies} function.
 }
 \keyword{datasets}

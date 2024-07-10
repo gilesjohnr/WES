@@ -17,14 +17,14 @@
 #' @returns data.frame
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #'
-#' d <- get_temp_data(lon = c(30.0281, -52.9857),
-#'                    lat = c(15.9094, -25.8756),
-#'                    dates = c("2020-08-01", "2020-12-31"),
-#'                    intervals = c(1,5,10))
+#' tmp <- get_temp_data(lon = c(30.0281, -52.9857),
+#'                      lat = c(15.9094, -25.8756),
+#'                      dates = c("2020-08-01", "2020-12-31"),
+#'                      intervals = c(1,5,10))
 #'
-#' head(d)
+#' head(tmp)
 #'
 #' }
 

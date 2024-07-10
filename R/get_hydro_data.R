@@ -17,14 +17,17 @@
 #' @returns data.frame
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #'
-#' download_elevation_data(lon = template_WES_data$lon,
-#'                         lat = template_WES_data$lat,
+#' MCO_lon <- c(7.416, 7.434)
+#' MCO_lat <- c(43.734, 43.747)
+#'
+#' download_elevation_data(lon = MCO_lon,
+#'                         lat = MCO_lat,
 #'                         path_output = tempdir())
 #'
-#' get_hydro_data(lon = template_WES_data$lon,
-#'                lat = template_WES_data$lat,
+#' get_hydro_data(lon = MCO_lon,
+#'                lat = MCO_lat,
 #'                path_dem_raster = file.path(tempdir(), 'dem.tif'),
 #'                path_output = tempdir())
 #'

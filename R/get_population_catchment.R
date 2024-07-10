@@ -21,21 +21,24 @@
 #' @return A \code{data.frame} containing the catchment area and population counts for each sampling site.
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #'
-#' download_worldpop_data(iso3 = 'BGD',
+#' MCO_lon <- c(7.416, 7.434)
+#' MCO_lat <- c(43.734, 43.747)
+#'
+#' download_worldpop_data(iso3 = 'MCO',
 #'                        year = 2020,
-#'                        constrained = FALSE,
+#'                        constrained = TRUE,
 #'                        UN_adjusted = FALSE,
 #'                        path_output = tempdir())
 #'
-#' download_elevation_data(lon = template_WES_data$lon,
-#'                         lat = template_WES_data$lat,
+#' download_elevation_data(lon = MCO_lon,
+#'                         lat = MCO_lat,
 #'                         path_output = tempdir())
 #'
-#' get_population_catchment(lon = template_WES_data$lon,
-#'                          lat = template_WES_data$lat,
-#'                          path_pop_raster = file.path(tempdir(), 'bgd_ppp_2020.tif'),
+#' get_population_catchment(lon = MCO_lon,
+#'                          lat = MCO_lat,
+#'                          path_pop_raster = file.path(tempdir(), 'mco_ppp_2020_constrained.tif'),
 #'                          path_dem_raster = file.path(tempdir(), 'dem.tif'),
 #'                          path_output = tempdir())
 #'

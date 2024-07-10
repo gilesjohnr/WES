@@ -12,7 +12,7 @@
 #' @returns Character string giving path to downloaded data.
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #'
 #' download_elevation_data(lon = template_WES_data$lon,
 #'                         lat = template_WES_data$lat,

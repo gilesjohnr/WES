@@ -16,7 +16,7 @@ comment = "#>"
 
 Environmental Sampling (ES) studies are conducted in a variety of settings, ranging from densely urban to suburban and rural areas. One aspect of collating a thorough set of metadata for ES observations includes reverse geocoding, which converts the latitude and longitude of sampling sites into place names. This process facilitates the grouping of sites, weighting of observations, and relating collected samples to the local population. To support this, we have implemented a set of functions that identify ISO3 codes, download administrative boundaries via the [geoBoundaries API](https://www.geoboundaries.org/), and retrieve all administrative levels related to each set of coordinates in an ES dataset.
 
-See below for an example of how to use the `WES` package to download geographic boundaries and identify the administrative units for a set of sampling sites.
+See below for an example of how to use the 'WES' package to download geographic boundaries and identify the administrative units for a set of sampling sites.
 
 ``` {r, eval=FALSE}
 # Get ISO3 code for sample data

@@ -23,7 +23,7 @@ The provided wrapper functions access open-source data APIs and relate several c
   * Evaporative Stress Index (ESI)
   * Daily river discharge data from the nearest river ($m^3/s$)
   
-See below for an example of how to use the `WES` package to calculate these climatic variables for the locations and times of a set of sampling observations.
+See below for an example of how to use the 'WES' package to calculate these climatic variables for the locations and times of a set of sampling observations.
 
 \
 

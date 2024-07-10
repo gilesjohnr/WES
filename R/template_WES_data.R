@@ -1,6 +1,6 @@
 #' Template environmental sampling data
 #'
-#' The `template_WES_data` object provides a template of the data format required by the `WES` package.
+#' The `template_WES_data` object provides a template of the data format required by the 'WES' package.
 #'
 #' @format ## `template_WES_data`
 #' A data frame with 6 columns:

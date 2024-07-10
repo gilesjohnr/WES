@@ -1,8 +1,8 @@
 # Version 1.0.0
 
-**The WES R package v1.0.0 migrated from the es R package v1.0.0 on July 03, 2024**
+**The 'WES' R package v1.0.0 migrated from the 'es' R package v1.0.0 on July 03, 2024**
 
-Welcome to the first release of the `WES` R package! Version 1.0.0 contains a collection of basic features that aim to make analyzing environmental sampling data easier and more reproducible. The functionality we have included to kick off the package includes:
+Welcome to the first release of the 'WES' R package! Version 1.0.0 contains a collection of basic features that aim to make analyzing environmental sampling data easier and more reproducible. The functionality we have included to kick off the package includes:
 
   * Detailed descriptions of standard data formats for environmental sampling data and standard curve assays. The functionality of the package requires data to follow these formats.
   * Functions for the absolute and relative quantification of qPCR data which include:

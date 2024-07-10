@@ -22,6 +22,6 @@ A data frame with 6 columns:
 template_WES_data
 }
 \description{
-The \code{template_WES_data} object provides a template of the data format required by the \code{WES} package.
+The \code{template_WES_data} object provides a template of the data format required by the 'WES' package.
 }
 \keyword{datasets}

@@ -118,9 +118,9 @@ functions that identify ISO3 codes, download administrative boundaries
 via the <a href="https://www.geoboundaries.org/" class="external-link">geoBoundaries API</a>,
 and retrieve all administrative levels related to each set of
 coordinates in an ES dataset.</p>
-<p>See below for an example of how to use the <code>WES</code> package
-to download geographic boundaries and identify the administrative units
-for a set of sampling sites.</p>
+<p>See below for an example of how to use the ‘WES’ package to download
+geographic boundaries and identify the administrative units for a set of
+sampling sites.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="co"># Get ISO3 code for sample data</span></span>
 <span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>template_iso <span class="ot">&lt;-</span> <span class="fu">coords_to_iso3</span>(<span class="at">lon=</span>template_WES_data<span class="sc">$</span>lon,</span>
 <span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>                               <span class="at">lat=</span>template_WES_data<span class="sc">$</span>lat)</span>

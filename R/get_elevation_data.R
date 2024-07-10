@@ -12,7 +12,7 @@
 #' @returns data.frame
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #'
 #' get_elevation_data(lon = template_WES_data$lon,
 #'                    lat = template_WES_data$lat)

@@ -111,12 +111,20 @@ R package.</p>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">get_elevation_data</span><span class="op">(</span>lon <span class="op">=</span> <span class="va">template_WES_data</span><span class="op">$</span><span class="va">lon</span>,</span></span>
 <span class="r-in"><span>                   lat <span class="op">=</span> <span class="va">template_WES_data</span><span class="op">$</span><span class="va">lat</span><span class="op">)</span></span></span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Total locations = 3</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Downloading elevation data from AWS API via elevatr package ...</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Mosaicing &amp; Projecting</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Note: Elevation units are in meters</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     lon   lat elevation</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 90.37 23.80        11</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 90.38 23.80        11</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 90.37 23.81        19</span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="op">}</span></span></span>
+<span class="r-in"><span><span class="co"># }</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

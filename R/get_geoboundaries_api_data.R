@@ -12,10 +12,10 @@
 #' @return A list containing the GeoBoundaries API data and file paths to admin boundaries in .geojson format.
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #'
-#' tmp <- get_geoboundaries_api_data('gbOpen', 'ITA', 2)
-#' print(tmp)
+#' tmp <- get_geoboundaries_api_data(iso3 = 'MCO', admin_level = 2, release = 'gbOpen')
+#' head(tmp)
 #'
 #' }
 

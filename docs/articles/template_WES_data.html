@@ -107,23 +107,23 @@
 
     
     
-<p>To use the data and methods provided in the <code>WES</code> R
-package, input data must match the formatting shown in the
+<p>To use the data and methods provided in the ‘WES’ R package, input
+data must match the formatting shown in the
 <code>template_WES_data</code> and
 <code>tamplate_WES_standard_curves</code> data objects. These objects
-are installed along with the <code>WES</code> package and provide a
-starting point to calculate derivative quantities, adding spatial
-metadata, and launching the visualization application. Both template
-data sources are described in more detail below:</p>
+are installed along with the ‘WES’ package and provide a starting point
+to calculate derivative quantities, adding spatial metadata, and
+launching the visualization application. Both template data sources are
+described in more detail below:</p>
 <p><br></p>
 <div class="section level2">
 <h2 id="template-environmental-sampling-data">Template environmental sampling data<a class="anchor" aria-label="anchor" href="#template-environmental-sampling-data"></a>
 </h2>
-<p>The primary data that is required for the methods in the
-<code>WES</code> package is shown in the <code>template_WES_data</code>
-object. These data have 6 columns and give the time and location of each
-observation and a Cycle Threshold (Ct) value from a qPCR assay. The code
-below shows how to view the data template:</p>
+<p>The primary data that is required for the methods in the ‘WES’
+package is shown in the <code>template_WES_data</code> object. These
+data have 6 columns and give the time and location of each observation
+and a Cycle Threshold (Ct) value from a qPCR assay. The code below shows
+how to view the data template:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">library</span>(WES)</span>
 <span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="fu">head</span>(template_WES_data)</span>
 <span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>date location_id  lat   lon target_name ct_value</span>

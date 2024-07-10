@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-The `WES` package contains a number of functions that will add important metadata (e.g. climate variables, elevation, topography, etc) to your environmental sampling observations. This assumes that you have constructed a data frame that matches the [`template_WES_data`](https://gilesjohnr.github.io/WES/reference/template_WES_data.html) data object. A detailed description of the template data can be found [HERE]().
+The 'WES' package contains a number of functions that will add important metadata (e.g. climate variables, elevation, topography, etc) to your environmental sampling observations. This assumes that you have constructed a data frame that matches the [`template_WES_data`](https://gilesjohnr.github.io/WES/reference/template_WES_data.html) data object. A detailed description of the template data can be found [HERE]().
 
 To retrieve metadata for the location and dates in your data frame, the functions listed in the table below will download them from open source APIs using wrappers of functions from other R packages. These methods should generalized to most locations and dates assuming that the data are available (e.g. very recent dates may not be uploaded to climate APIs yet). The list of metadata functions are:
 
@@ -107,7 +107,7 @@ x[10, 'api'] <- "User supplied population raster."
 
 knitr::kable(
      x,
-     col.names = c("`WES` wrapper", 
+     col.names = c("'WES' wrapper", 
                    "Description", 
                    "Package", 
                    "Function", 

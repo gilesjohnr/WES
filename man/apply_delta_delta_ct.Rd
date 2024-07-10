@@ -46,4 +46,6 @@ ddct_adjusted <- apply_delta_delta_ct(df = template_WES_data,
                                       pae_names = pae$target_name,
                                       pae_values = pae$mean)
 
+head(ddct_adjusted)
+
 }

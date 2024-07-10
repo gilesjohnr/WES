@@ -7,20 +7,20 @@
 
 # **WES**: an R package for Analyzing Environmental Sampling Data <img src="man/figures/logo.png" align="right" height="150" alt="" />
 
-The `WES` R package provides reproducible functions for collating and analyzing data from environmental sampling studies. Environmental Sampling (ES) of infectious diseases involves collecting samples from various sources (such as sewage, water, air, soil, or surfaces) to monitor the presence of pathogens in the environment. The tools here are intended to do the heavy lifting when analyzing ES data and include:
+The 'WES' R package provides reproducible functions for collating and analyzing data from environmental sampling studies. Environmental Sampling (ES) of infectious diseases involves collecting samples from various sources (such as sewage, water, air, soil, or surfaces) to monitor the presence of pathogens in the environment. The tools here are intended to do the heavy lifting when analyzing ES data and include:
 
   * establishing standardized data formats,
   * relative and absolute quantification of qPCR data,
   * collating spatial data for sampling sites,
   * and analysis of sample sizes and temporal trends.
 
-We developed the `WES` R package primarily for epidemiological surveillance studies for multiple pathogens in Low- and Middle-Income Countries (LMIC) where samples are collected from informal sewer networks. However, the functions should generalize to other applications provided they use the same data formats. Feel free to reach out with comments or questions; the package is currently in development and maintained by John Giles ([@gilesjohnr](https://github.com/gilesjohnr)).
+We developed the 'WES' R package primarily for epidemiological surveillance studies for multiple pathogens in Low- and Middle-Income Countries (LMIC) where samples are collected from informal sewer networks. However, the functions should generalize to other applications provided they use the same data formats. Feel free to reach out with comments or questions; the package is currently in development and maintained by John Giles ([@gilesjohnr](https://github.com/gilesjohnr)).
 
 \
 
 ## Data standards
 
-To use the data and methods provided in the `WES` R package, input data must match the formatting shown in the `template_WES_data` and `template_WES_standard_curves` data objects. Both template data sets are described in more detail in the following vignette:
+To use the data and methods provided in the 'WES' R package, input data must match the formatting shown in the `template_WES_data` and `template_WES_standard_curves` data objects. Both template data sets are described in more detail in the following vignette:
 
 <center>[Templates for input data sets](https://gilesjohnr.github.io/WES/articles/template_WES_data.html)</center>
 
@@ -62,13 +62,13 @@ Additional analyses are under development and will likely include the calculatio
 
 ## Visualization
 
-We are currently developing an RShiny application that will visualize the data and methods in the `WES` package.
+We are currently developing an RShiny application that will visualize the data and methods in the 'WES' package.
 
 \
 
 ## Installation
 
-Use the `devtools` package to install the development version of `WES` from the GitHub repository. R version >= 4.1.1 recommended.
+Use the `devtools` package to install the development version of 'WES' from the GitHub repository. R version >= 4.1.1 recommended.
 ```r
 install.packages("whitebox", dependencies=TRUE)
 whitebox::install_whitebox()

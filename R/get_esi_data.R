@@ -19,12 +19,14 @@
 #' @returns data.frame
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #'
-#' d <- get_esi_data(lon = c(-54.9857, -52.9857),
-#'                   lat = c(-5.9094, -25.8756),
-#'                   dates = c("2020-06-01", "2020-10-31"),
-#'                   intervals = c(5,10,20))
+#' tmp <- get_esi_data(lon = c(-54.9857, -52.9857),
+#'                     lat = c(-5.9094, -25.8756),
+#'                     dates = c("2020-06-01", "2020-10-31"),
+#'                     intervals = c(5,10,20))
+#'
+#' head(tmp)
 #'
 #' }
 

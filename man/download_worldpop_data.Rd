@@ -37,12 +37,11 @@ from the WorldPop FTP data server. Note that these data are spatial disaggregati
 saved to the \code{path_output} directory in .tif format.
 }
 \examples{
-\dontrun{
+\donttest{
 
-# Download population data for Taiwan
-download_worldpop_data(iso3 = 'TWN',
+download_worldpop_data(iso3 = 'MCO',
                        year = 2020,
-                       constrained = FALSE,
+                       constrained = TRUE,
                        UN_adjusted = FALSE,
                        path_output = tempdir())
 

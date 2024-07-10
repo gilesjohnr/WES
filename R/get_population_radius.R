@@ -14,18 +14,18 @@
 #' @return A \code{data.frame} containing the total population counts for the given radius around each sampling site.
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #'
-#' download_worldpop_data(iso3 = 'BGD',
+#' download_worldpop_data(iso3 = 'MCO',
 #'                        year = 2020,
-#'                        constrained = FALSE,
+#'                        constrained = TRUE,
 #'                        UN_adjusted = FALSE,
 #'                        path_output = tempdir())
 #'
-#' get_population_radius(lon = template_WES_data$lon,
-#'                       lat = template_WES_data$lat,
+#' get_population_radius(lon = c(7.416, 7.434),
+#'                       lat = c(43.734, 43.747),
 #'                       radius = 100,
-#'                       path_pop_raster = file.path(tempdir(), 'bgd_ppp_2020.tif'),
+#'                       path_pop_raster = file.path(tempdir(), 'mco_ppp_2020_constrained.tif'),
 #'                       path_output = tempdir())
 #'
 #' }
