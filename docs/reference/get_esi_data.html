@@ -130,10 +130,10 @@ then the average ESI over the preceding 3 days is returned.</p></dd>
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="va">d</span> <span class="op">&lt;-</span> <span class="fu">get_esi_data</span><span class="op">(</span>lon <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">54.9857</span>, <span class="op">-</span><span class="fl">52.9857</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>                  lat <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">5.9094</span>, <span class="op">-</span><span class="fl">25.8756</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>                  dates <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"2020-06-01"</span>, <span class="st">"2020-10-31"</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>                  intervals <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">5</span>,<span class="fl">10</span>,<span class="fl">20</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">tmp</span> <span class="op">&lt;-</span> <span class="fu">get_esi_data</span><span class="op">(</span>lon <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">54.9857</span>, <span class="op">-</span><span class="fl">52.9857</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>                    lat <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">5.9094</span>, <span class="op">-</span><span class="fl">25.8756</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>                    dates <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"2020-06-01"</span>, <span class="st">"2020-10-31"</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>                    intervals <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">5</span>,<span class="fl">10</span>,<span class="fl">20</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Total locations = 2</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Date range = 2020-06-01 -- 2020-10-31</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Downloading evaporative stress index (ESI) data from SERVIR Global via ClimateSERV API ...</span>
@@ -141,6 +141,22 @@ then the average ESI over the preceding 3 days is returned.</p></dd>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Fetching data from ClimateSERV </span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Getting your request...</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Calculating cumulative sums from the following intervals: 5, 10, 20</span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">tmp</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   id       date      lon     lat esi_daily_avg observed esi_daily_avg_5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1  1 2020-06-01 -54.9857 -5.9094     -1.551751        0       -1.531020</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2  1 2020-06-02 -54.9857 -5.9094     -1.560043        0       -1.539312</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3  1 2020-06-03 -54.9857 -5.9094     -1.568336        1       -1.547605</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4  1 2020-06-04 -54.9857 -5.9094     -1.453483        0       -1.535373</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5  1 2020-06-05 -54.9857 -5.9094     -1.338630        0       -1.502617</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6  1 2020-06-06 -54.9857 -5.9094     -1.223778        0       -1.449337</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   esi_daily_avg_10 esi_daily_avg_20</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1        -1.366722       -0.6760017</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2        -1.422870       -0.7967335</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3        -1.469447       -0.9137077</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4        -1.495258       -1.0143054</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5        -1.500302       -1.0985264</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6        -1.484581       -1.1663709</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># }</span></span></span>
 </code></pre></div>
