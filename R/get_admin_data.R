@@ -11,7 +11,7 @@
 #' @returns data.frame
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #'
 #' download_admin_data(iso3 = "MCO",
 #'                     release = 'gbOpen',

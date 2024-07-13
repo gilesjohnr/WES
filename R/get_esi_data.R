@@ -19,7 +19,7 @@
 #' @returns data.frame
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #'
 #' tmp <- get_esi_data(lon = c(-54.9857, -52.9857),
 #'                     lat = c(-5.9094, -25.8756),

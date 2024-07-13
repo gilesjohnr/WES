@@ -1,13 +1,14 @@
 <!-- badges: start -->
-[![R-CMD-check](https://github.com/gilesjohnr/WES/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/gilesjohnr/WES/actions/workflows/R-CMD-check.yaml)
-[![pkgdown](https://github.com/gilesjohnr/WES/actions/workflows/pkgdown.yaml/badge.svg?branch=main)](https://github.com/gilesjohnr/WES/actions/workflows/pkgdown.yaml)
-[![pages-build-deployment](https://github.com/gilesjohnr/WES/actions/workflows/pages/pages-build-deployment/badge.svg?branch=gh-pages)](https://github.com/gilesjohnr/WES/actions/workflows/pages/pages-build-deployment)
 [![CRAN status](https://www.r-pkg.org/badges/version/WES)](https://CRAN.R-project.org/package=WES)
+[![metacran downloads](https://cranlogs.r-pkg.org/badges/grand-total/WES)](https://cran.r-project.org/package=WES)
+[![R-CMD-check](https://github.com/gilesjohnr/WES/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/gilesjohnr/WES/actions/workflows/R-CMD-check.yaml)
+[![pages-build-deployment](https://github.com/gilesjohnr/WES/actions/workflows/pages/pages-build-deployment/badge.svg?branch=gh-pages)](https://github.com/gilesjohnr/WES/actions/workflows/pages/pages-build-deployment)
+[![pkgdown](https://github.com/gilesjohnr/WES/actions/workflows/pkgdown.yaml/badge.svg?branch=main)](https://github.com/gilesjohnr/WES/actions/workflows/pkgdown.yaml)
 <!-- badges: end -->
 
 # **WES**: an R package for Analyzing Environmental Sampling Data <img src="man/figures/logo.png" align="right" height="150" alt="" />
 
-The 'WES' R package provides reproducible functions for collating and analyzing data from environmental sampling studies. Environmental Sampling (ES) of infectious diseases involves collecting samples from various sources (such as sewage, water, air, soil, or surfaces) to monitor the presence of pathogens in the environment. The tools here are intended to do the heavy lifting when analyzing ES data and include:
+The 'WES' R package provides reproducible functions for collating and analyzing data from wastewater and environmental sampling studies. Wastewater and Environmental Sampling (WES) of infectious diseases involves collecting samples from various sources (such as sewage, water, air, soil, or surfaces) to monitor the presence of pathogens in the environment. The tools here are intended to do the heavy lifting when analyzing WES data and include:
 
   * establishing standardized data formats,
   * relative and absolute quantification of qPCR data,
@@ -40,7 +41,7 @@ Studies utilizing environmental sampling for disease surveillance often employ Q
 
 ## Covariates
 
-Environmental sampling studies conducted in informal sewer systems are vulnerable to confounding because the climate and local geography can impact the substrate available for collection. Therefore, we have included functions that download spatial data (such as climate, hydrology, and local populations) for the times and locations in the ES data. The following vignettes describe the data sources and methods used and relate these spatial data to ES data observations:
+Wastewater and Environmental Sampling studies conducted in informal sewer systems are vulnerable to confounding because the climate and local geography can impact the substrate available for collection. Therefore, we have included functions that download spatial data (such as climate, hydrology, and local populations) for the times and locations in the WES data. The following vignettes describe the data sources and methods used and relate these spatial data to WES data observations:
 
 <center>[Sources of spatial data](https://gilesjohnr.github.io/WES/articles/metadata_functions.html)</center>
 
@@ -70,10 +71,15 @@ We are currently developing an RShiny application that will visualize the data a
 
 Use the `devtools` package to install the development version of 'WES' from the GitHub repository. R version >= 4.1.1 recommended.
 ```r
-install.packages("whitebox", dependencies=TRUE)
+# The WhiteboxTools R frontend is a prerequisite for GIS functionality
+install.packages("whitebox", dependencies = TRUE)
 whitebox::install_whitebox()
 whitebox::wbt_version()
 
+# Install the current CRAN version
+install.packages("WES", dependencies = TRUE)
+
+# Or install the development version from GitHub
 install.packages('devtools')
 devtools::install_github("gilesjohnr/WES", dependencies=TRUE)
 ```

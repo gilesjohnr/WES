@@ -29,7 +29,7 @@ via the \href{https://CRAN.R-project.org/package=openmeteo}{\code{openmeteo}} R 
 specifies a set of intervals over which the function will calculate the accumulated temperature in the form of Accumulated Thermal Units (ATUs) for each interval.
 }
 \examples{
-\donttest{
+\dontrun{
 
 tmp <- get_temp_data(lon = c(30.0281, -52.9857),
                      lat = c(15.9094, -25.8756),

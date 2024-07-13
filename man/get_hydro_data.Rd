@@ -29,7 +29,7 @@ and the suite of variables are calculated using functions from the \href{https:/
 R frontend.
 }
 \examples{
-\donttest{
+\dontrun{
 
 MCO_lon <- c(7.416, 7.434)
 MCO_lat <- c(43.734, 43.747)

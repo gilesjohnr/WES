@@ -18,7 +18,7 @@
 #' @returns Character string giving path to downloaded data.
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #'
 #' download_worldpop_data(iso3 = 'MCO',
 #'                        year = 2020,

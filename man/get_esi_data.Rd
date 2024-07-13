@@ -31,7 +31,7 @@ specifies a set of intervals over which the function will calculate the average 
 of days for each location.
 }
 \examples{
-\donttest{
+\dontrun{
 
 tmp <- get_esi_data(lon = c(-54.9857, -52.9857),
                     lat = c(-5.9094, -25.8756),

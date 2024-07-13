@@ -42,7 +42,7 @@ Note that the delineation of catchments along streams (or sewer networks) still 
 from the provided DEM. Intermediate spatial variables are written to the directory specified in \code{path_output}.
 }
 \examples{
-\donttest{
+\dontrun{
 
 MCO_lon <- c(7.416, 7.434)
 MCO_lat <- c(43.734, 43.747)

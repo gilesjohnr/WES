@@ -17,7 +17,7 @@
 #' @returns data.frame
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #'
 #' tmp <- get_temp_data(lon = c(30.0281, -52.9857),
 #'                      lat = c(15.9094, -25.8756),

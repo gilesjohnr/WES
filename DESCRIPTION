@@ -1,8 +1,8 @@
 Package: WES
 Type: Package
 Title: Tools for Analyzing Wastewater and Environmental Sampling Data
-Version: 1.0.0
-Date: 2024-07-03
+Version: 1.0.1
+Date: 2024-07-13
 Authors@R: c(
           person("John R", "Giles", 
                  email = "john.giles@gatesfoundation.org", 
@@ -10,17 +10,19 @@ Authors@R: c(
                  comment = c(ORCID = "0000-0002-0954-4093"))
      )
 Description: Provides reproducible functions for collating and analyzing 
-     data from environmental sampling studies. Environmental Sampling (ES) 
-     of infectious diseases involves collecting samples from various sources 
-     (such as sewage, water, air, soil, or surfaces) to monitor the presence 
-     of pathogens in the environment. Analysis of ES data often requires the 
-     calculation of Real-Time Quantitative PCR (qPCR) variables, normalizing 
-     ES observations, and analyzing sampling site characteristics. To help 
-     reduce the complexity of these analyses we have implemented tools that 
-     assist with establishing standardized ES data formats, absolute and 
-     relative quantification of qPCR data, estimation of qPCR amplification 
-     efficiency, and collating open-source spatial data for sampling sites.
+     data from wastewater and environmental sampling studies. Wastewater and 
+     Environmental Sampling (WES) of infectious diseases involves collecting 
+     samples from various sources (such as sewage, water, air, soil, or surfaces) 
+     to monitor the presence of pathogens in the environment. Analysis of WES 
+     data often requires the calculation of Real-Time Quantitative PCR (qPCR) 
+     variables, normalizing WES observations, and analyzing sampling site 
+     characteristics. To help reduce the complexity of these analyses we have 
+     implemented tools that assist with establishing standardized WES data 
+     formats, absolute and relative quantification of qPCR data, estimation 
+     of qPCR amplification efficiency, and collating open-source spatial data 
+     for sampling sites.
 URL: https://www.r-wes.com/
+BugReports: https://github.com/gilesjohnr/WES/issues
 License: CC BY 4.0
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.1

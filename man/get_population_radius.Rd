@@ -27,7 +27,7 @@ residing within a given radius around each sampling site. Intermediate spatial v
 the directory specified in \code{path_output}.
 }
 \examples{
-\donttest{
+\dontrun{
 
 download_worldpop_data(iso3 = 'MCO',
                        year = 2020,

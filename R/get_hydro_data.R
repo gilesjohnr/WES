@@ -17,7 +17,7 @@
 #' @returns data.frame
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #'
 #' MCO_lon <- c(7.416, 7.434)
 #' MCO_lat <- c(43.734, 43.747)

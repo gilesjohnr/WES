@@ -37,7 +37,7 @@ from the WorldPop FTP data server. Note that these data are spatial disaggregati
 saved to the \code{path_output} directory in .tif format.
 }
 \examples{
-\donttest{
+\dontrun{
 
 download_worldpop_data(iso3 = 'MCO',
                        year = 2020,
