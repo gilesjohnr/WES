@@ -10,7 +10,7 @@ articles:
   get_climate_data: get_climate_data.html
   metadata_functions: metadata_functions.html
   template_WES_data: template_WES_data.html
-last_built: 2024-07-17T21:55Z
+last_built: 2024-07-17T22:01Z
 urls:
   reference: https://www.r-wes.com/reference
   article: https://www.r-wes.com/articles
